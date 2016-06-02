@@ -1,7 +1,7 @@
 processes: # naked process description (outside a flow/reusable)
     'left-panel/open': # this name resolves to 'we60-general/left-panel/open' when referenced externally
         title: 'Open the left front panel'
-        video: 'S0129' # refer to a video filename. Resolves to "video/S0129.en.mp4"
+        video: 'ht_9009' # refer to a video filename. Resolves to "video/ht_9009.en.mp4"
         steps:
             '00:01.12': "Unscrew the two fixing screws on the left edge"
             '00:03.00': "Release the latch"
