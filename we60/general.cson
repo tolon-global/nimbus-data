@@ -31,7 +31,6 @@ processes: # naked process description (outside a flow/reusable)
     'power/on':
         title: 'Turn the power on'
         steps: [
-            {include: 'power/connect'}
             {image: 'i1285'} # image as a step. Resolves to 'i1285.png'
             'Twist the power switch 90° clockwise ⤾'
         ]
