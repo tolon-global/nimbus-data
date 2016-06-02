@@ -106,3 +106,10 @@ flow:
             ]
 
     ]
+processes: [ # reusable blocks
+    'check-emergency-stop-alarm':
+        title: "Check the 'Emergency Stop' alarm status"
+        steps: [
+            "Check the screen for the alert box"
+        ]
+]
