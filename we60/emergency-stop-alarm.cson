@@ -1,4 +1,4 @@
-cards: 
+cards:
     'check-alarm':
         title: "Check alarm"
         processes: [ # links to process descriptions
@@ -43,7 +43,7 @@ cards:
             label: "No, depressed"
             target: 'replace-esb'
 
-    'release-esb/check-alarm':
+    'release-esb-check-alarm':
         template: 'check-alarm' # template defines the default values, overridden by defined values
         negative:
             target: 'check-contact'
@@ -51,7 +51,7 @@ cards:
     'replace-esb':
         title: "Replace ESB"
         processes: [
-            "general/left-panel/open"
+            "general/left-panel-open"
             title: "Replace the ESB"
             steps: [
                 "Unscrew the ESB cable terminals from the ESB contact socket"
@@ -63,16 +63,16 @@ cards:
                 "Plug the contact of the ESB into its socket"
                 "Screw the ESB cable terminals into the ESB contact socket"
             ]
-            "general/left-panel/close"
+            "general/left-panel-close"
             '$template'
         ]
-        template: 'release-esb/check-alarm'
+        template: 'release-esb-check-alarm'
 
     'check-contact':
         title: "Check ESB contact"
         processes: [
-            "general/power/off"
-            "general/left-panel/open"
+            "general/power-off"
+            "general/left-panel-open"
             title: "Check the contacts on the ESB"
             steps: [
                 """
@@ -92,7 +92,7 @@ cards:
         template: 'check-alarm'
         title: "Replace ESB contact"
         processes: [
-            "general/left-panel/open"
+            "general/left-panel-open"
             title: "Replace the contact on the ESB"
             steps: [
                 "Unscrew the ESB cable terminals from the ESB contact socket"

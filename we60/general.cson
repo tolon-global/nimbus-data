@@ -1,5 +1,5 @@
 processes: # naked process description (outside a flow/reusable)
-    'left-panel/open': # this name resolves to 'we60/general/left-panel/open' when referenced externally
+    'left-panel-open': # this name resolves to 'we60/general/left-panel-open' when referenced externally
         title: 'Open the left front panel'
         video: 'ht_9009' # refer to a video filename. Resolves to "video/ht_9009.en.mp4"
         steps:
@@ -15,7 +15,7 @@ processes: # naked process description (outside a flow/reusable)
             skip: # skip (gray out) this process if the tags below are true
                 'left-panel': 'open'
 
-    'left-panel/close':
+    'left-panel-close':
         title: 'Close the left front panel'
         steps: [
             "Close the panel"
@@ -28,7 +28,7 @@ processes: # naked process description (outside a flow/reusable)
             only: # do this process only if the tags below are true
                 'left-panel': 'open'
 
-    'power/on':
+    'power-on':
         title: 'Turn the power on'
         steps: [
             {image: 'i1285'} # image as a step. Resolves to 'i1285.png'
@@ -40,7 +40,7 @@ processes: # naked process description (outside a flow/reusable)
             skip:
                 'power': on
 
-    'power/off':
+    'power-off':
         title: 'Turn the power off'
         steps:
             'Twist the power switch 90° anti-clockwise ⤿'
