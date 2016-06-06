@@ -1,0 +1,73 @@
+#!/usr/bin/env coffee
+fs = require 'fs'
+glob = require 'glob'
+cson = require 'cson'
+EJSON = require 'ejson'
+deepmerge = require 'deepmerge'
+
+sources = []
+rawdata = {}
+data =
+    cards: {}
+    processes: {}
+
+g = glob "**/*.cson", (e,f) ->
+    sources = f
+
+    for source in sources
+        rawdata[source.replace(/\.cson$/,'')] = cson.load source
+
+    for filename, file of rawdata
+        for innername, fragment of file.cards
+            data.cards["#{filename}/#{innername}"] = fragment
+
+        for innername, fragment of file.processes
+            data.processes["#{filename}/#{innername}"] = fragment
+
+    for uri, card of data.cards
+        expand_links uri, card
+        embed_processes uri, card
+        apply_templates uri, card
+
+
+    fs.writeFile "data.json", EJSON.stringify data, {indent: true}
+
+expand_links = (uri, card) ->
+    defaults = {positive: "Yes", negative: "No"}
+    for answer in ['positive', 'negative']
+        switch typeof card[answer]
+            when 'string'
+                card[answer] =
+                    label: defaults[answer]
+                    target: mesh_uri uri, card[answer]
+            when 'object'
+                card[answer].label ?= defaults[answer]
+                break unless card[answer].target
+                card[answer].target = mesh_uri uri, card[answer].target
+
+embed_processes = (uri, card) ->
+    return unless card.processes?
+    for proc, i in card.processes
+        if typeof proc is 'string'
+            continue if proc is "$template"
+            full_uri = mesh_uri uri, proc
+            card.processes[i] = data.processes[full_uri] || full_uri
+            card.processes[i].source = full_uri
+
+apply_templates = (uri, card) ->
+    return unless card.template?
+    template_uri = mesh_uri uri, card.template
+    if card.processes?
+        for proc, i in card.processes
+            if proc is "$template"
+                debugger
+                template_procs = data.cards[template_uri].processes
+                card.processes.splice i, 1, template_procs...
+
+    merged_card = deepmerge data.cards[template_uri], card
+    data.cards[uri] = merged_card
+
+mesh_uri = (context, local) ->
+    context_fragments = context.split '/'
+    local_fragments = local.split '/'
+    [context_fragments[0...-local_fragments.length]..., local_fragments...].join '/'
