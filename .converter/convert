@@ -44,6 +44,9 @@ expand_links = (uri, card) ->
                 card[answer].label ?= defaults[answer]
                 break unless card[answer].target
                 card[answer].target = mesh_uri uri, card[answer].target
+    if card.options?
+        for option in card.options
+            option.target = mesh_uri uri, option.target
 
 embed_processes = (uri, card) ->
     return unless card.processes?
