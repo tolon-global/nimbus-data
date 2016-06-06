@@ -1,46 +1,43 @@
-flow:
-    start: 'root-cause'
-    cards: [
-        'root-cause':
-            class: 'escape'
-            title: 'Problem'
-            question: "What's wrong?"
-            options: [ # multiple choice question
-                title: "No parts"
-                description: """
-                    Choose **No parts** if you don't currently have the spare parts
-                    and consumables required for the procedure. You can come back
-                    with the parts later, or order them.
-                """
-                target: 'no-parts'
-            ,
-                title: "No tools"
-                description: """
-                    Choose **No tools** if you don't have the required tools or other
-                    equipment (like lifting equipment) needed to finish the repairs.
-                    You can come back later, or ask for support.
-                """
-                target: 'no-tools'
-            ,
-                title: "No time"
-                description: """
-                    Choose **No time** if working hours are over, or if you have
-                    another appointment you must keep, and you will come back for this later.
-                """
-                target: 'no-time'
-            ,
-                title: "No skills"
-                description: """
-                    Choose **No skills** if you do not have the required training or
-                    certification to complete this procedure, or if you need the
-                    help of others to complete it.
-                """
-                target: 'no-skills'
-            ]
-            positive:
-                label: "That's it"
-                # target is not specified, will get from multiple choice
-            negative:
-                label: "Something else"
-                target: "something-else"
-    ]
+cards:
+    'root-cause':
+        class: 'escape'
+        title: 'Problem'
+        question: "What's wrong?"
+        options: [ # multiple choice question
+            title: "No parts"
+            description: """
+                Choose **No parts** if you don't currently have the spare parts
+                and consumables required for the procedure. You can come back
+                with the parts later, or order them.
+            """
+            target: 'no-parts'
+        ,
+            title: "No tools"
+            description: """
+                Choose **No tools** if you don't have the required tools or other
+                equipment (like lifting equipment) needed to finish the repairs.
+                You can come back later, or ask for support.
+            """
+            target: 'no-tools'
+        ,
+            title: "No time"
+            description: """
+                Choose **No time** if working hours are over, or if you have
+                another appointment you must keep, and you will come back for this later.
+            """
+            target: 'no-time'
+        ,
+            title: "No skills"
+            description: """
+                Choose **No skills** if you do not have the required training or
+                certification to complete this procedure, or if you need the
+                help of others to complete it.
+            """
+            target: 'no-skills'
+        ]
+        positive:
+            label: "That's it"
+            # target is not specified, will get from multiple choice
+        negative:
+            label: "Something else"
+            target: "something-else"
