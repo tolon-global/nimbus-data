@@ -20,3 +20,24 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-steam-vane'
+    'check-steam-vane'
+        title: "Check Steam Vane"
+        processes: [ # links to process descriptions
+            'check-the-steam-vane'
+        ]
+        question: "Is it open?"
+        positive:
+            target: 'check-strainer-clogging'
+        negative:
+            target: 'open-steam-vane'
+    'open-steam-vane':
+        title: "Open Steam Vane"
+        processes: [ # links to process descriptions
+            'open-the-steam-vane'
+        "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-strainer-clogging'
