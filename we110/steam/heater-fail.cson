@@ -2,7 +2,6 @@ cards:
     'check-steam-pressure':
         title: "Check Steam Pressure"
         processes: [ # links to process descriptions
-            'check-the-steam-pressure'
         ]
         question: "Is it sufficient?"
         positive:
@@ -12,7 +11,6 @@ cards:
     'adjust-steam-pressure':
         title: "Adjust Steam Pressure"
         processes: [ # links to process descriptions
-            'adjust-the-steam-pressure'
             'general/run-a-program'
         ]
         question: "Is the problem solved?"
@@ -54,7 +52,6 @@ cards:
     'clear-strainer':
         title: "Clear Strainer"
         processes: [ # links to process descriptions
-            'clear-the-strainer'
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -103,8 +100,8 @@ cards:
     'change-steam-heating-do':
         title: "Change Steam Heating DO"
         processes: [ # inline process descriptions
-            'Check the Steam Heating DO availability'
-            title: "Change the DO assignment for the Steam Heating"
+            'Change the DO assignment for the Steam Heating'
+            title: "Change Steam Heating DO"
             steps: [
                 "Press the "OK" button to assign the target DO"
                 "Press the "Exit" button to exit. At this stage the software will ask you if you want to save the changes. To save your changes select the "Yes" button by pressing the left-right direction buttons and press the "OK" button to confirm the selection"
@@ -137,3 +134,41 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-cable-steam-valve-cp'
+    'check-cable-steam-valve-cp':
+        title: "Check Cable Steam Valve CP"
+        processes: [ # inline process descriptions
+            title: "Check Cable Steam Valve CP"
+            steps: [
+                "Unscrew the control valve socket holder screw from the steam control valve coil by using a screwdriver"
+                "Detach the steam valve coil socket from the steam control valve coil"
+                "Detach the terminal block of the socket from its housing by using the screwdriver as a lever"
+                "Check the voltage between the terminals of the terminal block by using a voltmeter"
+            ]
+        ]
+        question: "Is the cable functional?"
+        positive:
+            target: 'check-steam-valve-coil'
+        negative:
+            target: 'replace-steam-valve-cp-cable'
+    'replace-steam-valve-cp-cable':
+        title: "Replace/Repair the cable between the Steam Control Valve and the CP"
+        processes: [ # inline process descriptions
+            title: "Replace/Repair the cable between the Steam Control Valve and the CP"
+            steps: [
+                "Burada tanımlanan sıra ile arka kapak açma, üst kapaklar (üstte üç ayrı parça kapak var) açma, ön kapak açma yapılır."
+                "Kablo yolu üzerindeki klipsler açılır."
+                "Pano içi makaron çıkartılır."
+                "Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerinden çıkartılırlar."
+                "Yukarıdaki maddede değinilen uçların cihaz arkasındaki karşı uçları da valf soketlerinden çıkartılırlar."
+                "Yeni kablo valf uçları soketlerine takılır."
+                "Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerine takılır."
+                "Pano içi makaron kablolara sarılır."
+                "Kablo yolu üzerindeki kablolar klipslenir."
+            ]
+            "general/check-do-on-diagnostic"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-steam-valve-coil'
