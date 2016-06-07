@@ -44,8 +44,9 @@ processes: # naked process description (outside a flow/reusable)
 
     'power-off':
         title: 'Turn the power off'
-        steps:
+        steps: [
             'Twist the power switch 90° anti-clockwise ⤿'
+        ]
         tags:
             skip:
                 'power': off
