@@ -199,3 +199,49 @@ cards:
             target: 'check-hose-pneumatic-valve-base'
         negative:
             target: 'replace-steam-valve-coil'
+    'replace-steam-valve-coil':
+        title: "Replace Steam Control Valve Coil"
+        processes: [ # inline process descriptions
+            title: "Replace the coil of the Steam Control Valve"
+            steps: [
+                'Unbolt the plastic nut which fastens the coil onto the coil armature on the back of the valve'
+                'Remove the coil from the steam control valve by pulling it downwards from the front side of the coil along the armature (back of the machine)'
+                'Install the new coil onto the steam control valve by pushing it upwards from the front side until the coil reaches the base of the armature (back of the machine)'
+                'Bolt the plastic nut which fastens the coil onto the armature whilst pushing the coil upwards'
+                'Attach the steam valve coil socket onto the new coil'
+                'Screw the coil socket onto the coil via its holder screw by using a screwdriver'
+            ]
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-hose-pneumatic-valve-base'
+    'check-hose-pneumatic-valve-base':
+        title: "Check Hose Between Steam Valve and CP"
+        processes: [ # inline process descriptions
+            title: "Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve"
+            steps: [
+                'Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve by detaching the hose from the steam output fitting of the Steam Control Valve and observing the air flow'
+            ]
+        ]
+        question: "Is the hose valid?"
+        positive:
+            target: 'check-pneumatic-steam-valve'
+        negative:
+            target: 'replace-hose-pneumatic-valve-vane'
+    'replace-hose-pneumatic-valve-vane':
+        title: "Replace Hose Between Pneumatic Valve and Vane"
+        processes: [ # inline process descriptions
+            title: "Replace the hose between the pneumatic steam valve and the steam vane with actuator"
+            steps: [
+                'Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve by detaching the hose from the steam output fitting of the Steam Control Valve and observing the air flow'
+            ]
+        "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'send-cp-to-service'
