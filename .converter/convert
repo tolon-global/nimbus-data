@@ -63,7 +63,6 @@ apply_templates = (uri, card) ->
     if card.processes?
         for proc, i in card.processes
             if proc is "$template"
-                debugger
                 template_procs = data.cards[template_uri].processes
                 card.processes.splice i, 1, template_procs...
 
