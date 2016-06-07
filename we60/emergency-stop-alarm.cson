@@ -116,3 +116,8 @@ processes:  # reusable blocks
         steps: [
             "Check the screen for the alert box"
         ]
+    'check-esb-mechanically':
+        title: "Check the Emergency Stop Button mechanically"
+        steps: [
+            "Press the ESB to check if the button can be pressed"
+        ]
