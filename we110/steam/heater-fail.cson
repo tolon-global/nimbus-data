@@ -2,6 +2,9 @@ cards:
     'check-steam-pressure':
         title: "Check Steam Pressure"
         processes: [ # links to process descriptions
+            title: "Check the steam pressure"
+            steps: [
+            ]
         ]
         question: "Is it sufficient?"
         positive:
@@ -11,6 +14,9 @@ cards:
     'adjust-steam-pressure':
         title: "Adjust Steam Pressure"
         processes: [ # links to process descriptions
+            title: "Adjust the steam pressure"
+            steps: [
+            ]
             'general/run-a-program'
         ]
         question: "Is the problem solved?"
@@ -21,8 +27,9 @@ cards:
     'check-steam-vane':
         title: "Check Steam Vane"
         processes: [ # links to process descriptions
-            'check-the-steam-vane'
-        ]
+            title: "Check the steam vane"
+            steps: [
+            ]
         question: "Is it open?"
         positive:
             target: 'check-strainer-clogging'
@@ -31,7 +38,9 @@ cards:
     'open-steam-vane':
         title: "Open Steam Vane"
         processes: [ # links to process descriptions
-            'open-the-steam-vane'
+            title: "Open the steam vane"
+            steps: [
+            ]
             'general/run-a-program'
         ]
         question: "Is the problem solved?"
@@ -42,8 +51,9 @@ cards:
     'check-strainer-clogging':
         title: "Check Strainer Clogging"
         processes: [ # links to process descriptions
-            'check-the-strainer-for-clogging'
-        ]
+            title: "Check the strainer for clogging"
+            steps: [
+            ]
         question: "Is the strainer clogged?"
         positive:
             target: 'check-steam-heating-do'
@@ -52,6 +62,9 @@ cards:
     'clear-strainer':
         title: "Clear Strainer"
         processes: [ # links to process descriptions
+            title: "Clear the strainer"
+            steps: [
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -62,8 +75,7 @@ cards:
     'check-steam-heating-do':
         title: "Check Steam Heating DO"
         processes: [ # inline process descriptions
-            'check-the steam-heating-do-on-the-diagnostic'
-            title: "Check Steam Heating DO"
+            title: "Check the Steam Heating DO on the Diagnostic"
             steps: [
                 'Enter the "Main" menu by selecting and pressing the "Menu" button'
                 'Enter the "Service" menu by selecting and pressing the "Service" button'
@@ -81,15 +93,14 @@ cards:
     'steam-heating-do-available':
         title: "Steam Heating DO available"
         processes: [ # inline process descriptions
-            'Check the Steam Heating DO availability'
-            title: "Steam Heating DO available"
+            title: "Check the Steam Heating DO availability"
             steps: [
-                "Enter the "Main" menu by selecting and pressing the "Menu" button"
-                "Enter the "Service" menu by selecting and pressing the "Service" button"
-                "Enter the "I/O Link" screen by selecting and pressing the "I/O Link" button"
-                "Select the Steam Valve DO"
-                "Press the "OK" button to enter the edit mode"
-                "Change the current DO to one of the available DOs by pressing the up-down direction buttons"
+                'Enter the "Main" menu by selecting and pressing the "Menu" button'
+                'Enter the "Service" menu by selecting and pressing the "Service" button'
+                'Enter the "I/O Link" screen by selecting and pressing the "I/O Link" button'
+                'Select the Steam Valve DO'
+                'Press the "OK" button to enter the edit mode'
+                'Change the current DO to one of the available DOs by pressing the up-down direction buttons'
             ]
         ]
         question: "Are there any unused available DOs?"
@@ -100,23 +111,22 @@ cards:
     'change-steam-heating-do':
         title: "Change Steam Heating DO"
         processes: [ # inline process descriptions
-            'Change the DO assignment for the Steam Heating'
-            title: "Change Steam Heating DO"
+            title: "Change the DO assignment for the Steam Heating"
             steps: [
-                "Press the "OK" button to assign the target DO"
-                "Press the "Exit" button to exit. At this stage the software will ask you if you want to save the changes. To save your changes select the "Yes" button by pressing the left-right direction buttons and press the "OK" button to confirm the selection"
-                "The software will return to the "Service" menu"
-                "Detach the S13 socket plug from the back of the Control Panel"
-                "Remove the 7. socket terminal from the S13 socket plug by pushing down the fins of the socket terminal with the terminal removal tool"
-                "Attach the S13 socket plug into the S13 socket"
-                "Raise up the fins of the socket terminal with the terminal removal tool"
-                "Detach the S19 socket plug from the back of the Control Panel"
-                "Insert the socket terminal into the 6. socket of the S19 socket plug which corresponds to the DO which has been assigned in the DO assignment step in this video (Step no 1). Warning: You have to select the corresponding socket and socket plug if you choose another DO for this procedure. You can find a list of the DOs and their corresponding sockets on the back of the Control Panel"
-                "Attach the S19 socket plug into the S19 socket"
-                "Enter the "Diagnostic" screen by selecting and pressing the "Diagnostic" button"
-                "Select the "Steam Valve" DO on the "Digital Outputs" frame"
-                "Press the "OK" button to activate the "Steam Valve" DO"
-                "Check the voltage value by inserting one lead of the multimeter into any socket between the 12. and the 22. sockets on the S11 socket group and inserting the other lead of the multimeter into the 6. socket on the S19 socket group"
+                'Press the "OK" button to assign the target DO'
+                'Press the "Exit" button to exit. At this stage the software will ask you if you want to save the changes. To save your changes select the "Yes" button by pressing the left-right direction buttons and press the "OK" button to confirm the selection'
+                'The software will return to the "Service" menu'
+                'Detach the S13 socket plug from the back of the Control Panel'
+                'Remove the 7. socket terminal from the S13 socket plug by pushing down the fins of the socket terminal with the terminal removal tool'
+                'Attach the S13 socket plug into the S13 socket'
+                'Raise up the fins of the socket terminal with the terminal removal tool'
+                'Detach the S19 socket plug from the back of the Control Panel'
+                'Insert the socket terminal into the 6. socket of the S19 socket plug which corresponds to the DO which has been assigned in the DO assignment step in this video (Step no 1). Warning: You have to select the corresponding socket and socket plug if you choose another DO for this procedure. You can find a list of the DOs and their corresponding sockets on the back of the Control Panel'
+                'Attach the S19 socket plug into the S19 socket'
+                'Enter the "Diagnostic" screen by selecting and pressing the "Diagnostic" button'
+                'Select the "Steam Valve" DO on the "Digital Outputs" frame'
+                'Press the "OK" button to activate the "Steam Valve" DO'
+                'Check the voltage value by inserting one lead of the multimeter into any socket between the 12. and the 22. sockets on the S11 socket group and inserting the other lead of the multimeter into the 6. socket on the S19 socket group'
             ]
         ]
         question: "Does ±24V DC exist on the DO?"
@@ -127,7 +137,6 @@ cards:
     'run-a-program':
         title: "Run A Program"
         processes: [ # links to process descriptions
-            'run-a-program-to-monitor-the-problem'
         "general/run-a-program"
         ]
         positive:
@@ -137,12 +146,12 @@ cards:
     'check-cable-steam-valve-cp':
         title: "Check Cable Steam Valve CP"
         processes: [ # inline process descriptions
-            title: "Check Cable Steam Valve CP"
+            title: "Check the cable between the steam control valve and the CP"
             steps: [
-                "Unscrew the control valve socket holder screw from the steam control valve coil by using a screwdriver"
-                "Detach the steam valve coil socket from the steam control valve coil"
-                "Detach the terminal block of the socket from its housing by using the screwdriver as a lever"
-                "Check the voltage between the terminals of the terminal block by using a voltmeter"
+                'Unscrew the control valve socket holder screw from the steam control valve coil by using a screwdriver'
+                'Detach the steam valve coil socket from the steam control valve coil'
+                'Detach the terminal block of the socket from its housing by using the screwdriver as a lever'
+                'Check the voltage between the terminals of the terminal block by using a voltmeter'
             ]
         ]
         question: "Is the cable functional?"
@@ -151,19 +160,19 @@ cards:
         negative:
             target: 'replace-steam-valve-cp-cable'
     'replace-steam-valve-cp-cable':
-        title: "Replace/Repair the cable between the Steam Control Valve and the CP"
+        title: "Replace/Repair Steam Valve-CP Cable"
         processes: [ # inline process descriptions
             title: "Replace/Repair the cable between the Steam Control Valve and the CP"
             steps: [
-                "Burada tanımlanan sıra ile arka kapak açma, üst kapaklar (üstte üç ayrı parça kapak var) açma, ön kapak açma yapılır."
-                "Kablo yolu üzerindeki klipsler açılır."
-                "Pano içi makaron çıkartılır."
-                "Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerinden çıkartılırlar."
-                "Yukarıdaki maddede değinilen uçların cihaz arkasındaki karşı uçları da valf soketlerinden çıkartılırlar."
-                "Yeni kablo valf uçları soketlerine takılır."
-                "Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerine takılır."
-                "Pano içi makaron kablolara sarılır."
-                "Kablo yolu üzerindeki kablolar klipslenir."
+                'Burada tanımlanan sıra ile arka kapak açma, üst kapaklar (üstte üç ayrı parça kapak var) açma, ön kapak açma yapılır.'
+                'Kablo yolu üzerindeki klipsler açılır.'
+                'Pano içi makaron çıkartılır.'
+                'Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerinden çıkartılırlar.'
+                'Yukarıdaki maddede değinilen uçların cihaz arkasındaki karşı uçları da valf soketlerinden çıkartılırlar.'
+                'Yeni kablo valf uçları soketlerine takılır.'
+                'Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerine takılır.'
+                'Pano içi makaron kablolara sarılır.'
+                'Kablo yolu üzerindeki kablolar klipslenir.'
             ]
             "general/check-do-on-diagnostic"
         ]
@@ -172,3 +181,21 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-steam-valve-coil'
+    ''check-steam-valve-coil':
+        title: "Check Steam Control Valve Coil"
+        processes: [ # inline process descriptions
+            title: "Check the coil of the steam control valve"
+            steps: [
+                'If the Steam Heating DO has been deactivated by the automatic logout process then re-activate it'
+                'Check the resistance value between the terminals of the steam control valve coil terminals by using a multimeter'
+                'Attach the terminal block of the socket into its housing'
+                'Insert the socket holder screw into its screw hole'
+                'Attach the steam valve coil socket onto the steam control valve coil'
+                'Screw the coil socket onto the coil via its holder screw by using a screwdriver'
+            ]
+        ]
+        question: "Is the coil functioning?"
+        positive:
+            target: 'check-hose-pneumatic-valve-base'
+        negative:
+            target: 'replace-steam-valve-coil'
