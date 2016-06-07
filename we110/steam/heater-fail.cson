@@ -13,14 +13,14 @@ cards:
         title: "Adjust Steam Pressure"
         processes: [ # links to process descriptions
             'adjust-the-steam-pressure'
-        "general/run-a-program"
+            'general/run-a-program'
         ]
         question: "Is the problem solved?"
         positive:
             target: 'problem-solved'
         negative:
             target: 'check-steam-vane'
-    'check-steam-vane'
+    'check-steam-vane':
         title: "Check Steam Vane"
         processes: [ # links to process descriptions
             'check-the-steam-vane'
@@ -34,10 +34,50 @@ cards:
         title: "Open Steam Vane"
         processes: [ # links to process descriptions
             'open-the-steam-vane'
-        "general/run-a-program"
+            'general/run-a-program'
         ]
         question: "Is the problem solved?"
         positive:
             target: 'problem-solved'
         negative:
             target: 'check-strainer-clogging'
+    'check-strainer-clogging':
+        title: "Check Strainer Clogging"
+        processes: [ # links to process descriptions
+            'check-the-strainer-for-clogging'
+        ]
+        question: "Is the strainer clogged?"
+        positive:
+            target: 'check-steam-heating-do'
+        negative:
+            target: 'clear-strainer'
+    'clear-strainer':
+        title: "Clear Strainer"
+        processes: [ # links to process descriptions
+            'clear-the-strainer'
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-steam-heating-do'
+    'check-steam-heating-do':
+        title: "Check Steam Heating DO"
+        processes: [ # inline process descriptions
+            'check-the steam-heating-do-on-the-diagnostic'
+            title: "Check Steam Heating DO"
+            steps: [
+                'Enter the "Main" menu by selecting and pressing the "Menu" button'
+                'Enter the "Service" menu by selecting and pressing the "Service" button'
+                'Enter the "Diagnostics" screen by selecting and pressing the "Diagnostics" button (The "Manual Control" button on versions prior to 1.0)'
+                'Select the "Steam Valve" DO on the "Digital Outputs" frame'
+                'Press the "OK" button to activate the "Steam Valve" DO'
+                'Insert one lead of the multimeter to any socket between the 12. and the 22. sockets on the S11 socket group and insert the other lead of the multimeter to the 7. socket on the S13 socket group'
+            ]
+        ]
+        question: "Is the DO functioning?"
+        positive:
+            target: 'check-cable-steam-valve-cp'
+        negative:
+            target: 'steam-heating-do-available'
