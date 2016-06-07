@@ -1,0 +1,11 @@
+cards:
+    'check-steam-pressure':
+        title: "Check Steam Pressure"
+        processes: [ # links to process descriptions
+            'check-the-steam-pressure'
+        ]
+        question: "Is it sufficient?"
+        positive:
+            target: 'check-steam-vane'
+        negative:
+            target: 'adjust-steam-pressure'
