@@ -9,3 +9,14 @@ cards:
             target: 'check-steam-vane'
         negative:
             target: 'adjust-steam-pressure'
+    'adjust-steam-pressure':
+        title: "Adjust Steam Pressure"
+        processes: [ # links to process descriptions
+            'adjust-the-steam-pressure'
+        "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-steam-vane'
