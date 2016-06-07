@@ -1,0 +1,139 @@
+cards:
+    'check-steam-pressure':
+        title: "Check Steam Pressure"
+        processes: [ # links to process descriptions
+            'check-the-steam-pressure'
+        ]
+        question: "Is it sufficient?"
+        positive:
+            target: 'check-steam-vane'
+        negative:
+            target: 'adjust-steam-pressure'
+    'adjust-steam-pressure':
+        title: "Adjust Steam Pressure"
+        processes: [ # links to process descriptions
+            'adjust-the-steam-pressure'
+            'general/run-a-program'
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-steam-vane'
+    'check-steam-vane':
+        title: "Check Steam Vane"
+        processes: [ # links to process descriptions
+            'check-the-steam-vane'
+        ]
+        question: "Is it open?"
+        positive:
+            target: 'check-strainer-clogging'
+        negative:
+            target: 'open-steam-vane'
+    'open-steam-vane':
+        title: "Open Steam Vane"
+        processes: [ # links to process descriptions
+            'open-the-steam-vane'
+            'general/run-a-program'
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-strainer-clogging'
+    'check-strainer-clogging':
+        title: "Check Strainer Clogging"
+        processes: [ # links to process descriptions
+            'check-the-strainer-for-clogging'
+        ]
+        question: "Is the strainer clogged?"
+        positive:
+            target: 'check-steam-heating-do'
+        negative:
+            target: 'clear-strainer'
+    'clear-strainer':
+        title: "Clear Strainer"
+        processes: [ # links to process descriptions
+            'clear-the-strainer'
+            'general/run-a-program'
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-steam-heating-do'
+    'check-steam-heating-do':
+        title: "Check Steam Heating DO"
+        processes: [ # inline process descriptions
+            'check-the steam-heating-do-on-the-diagnostic'
+            title: "Check Steam Heating DO"
+            steps: [
+                'Enter the "Main" menu by selecting and pressing the "Menu" button'
+                'Enter the "Service" menu by selecting and pressing the "Service" button'
+                'Enter the "Diagnostics" screen by selecting and pressing the "Diagnostics" button (The "Manual Control" button on versions prior to 1.0)'
+                'Select the "Steam Valve" DO on the "Digital Outputs" frame'
+                'Press the "OK" button to activate the "Steam Valve" DO'
+                'Insert one lead of the multimeter to any socket between the 12. and the 22. sockets on the S11 socket group and insert the other lead of the multimeter to the 7. socket on the S13 socket group'
+            ]
+        ]
+        question: "Is the DO functioning?"
+        positive:
+            target: 'check-cable-steam-valve-cp'
+        negative:
+            target: 'steam-heating-do-available'
+    'steam-heating-do-available':
+        title: "Steam Heating DO available"
+        processes: [ # inline process descriptions
+            'Check the Steam Heating DO availability'
+            title: "Steam Heating DO available"
+            steps: [
+                'Enter the "Main" menu by selecting and pressing the "Menu" button'
+                'Enter the "Service" menu by selecting and pressing the "Service" button'
+                'Enter the "I/O Link" screen by selecting and pressing the "I/O Link" button'
+                'Select the Steam Valve DO'
+                'Press the "OK" button to enter the edit mode'
+                'Change the current DO to one of the available DOs by pressing the up-down direction buttons'
+            ]
+        ]
+        question: "Are there any unused available DOs?"
+        positive:
+            target: 'change-steam-heating-do'
+        negative:
+            target: 'send-cp-to-service'
+    'change-steam-heating-do':
+        title: "Change Steam Heating DO"
+        processes: [ # inline process descriptions
+            'Check the Steam Heating DO availability'
+            title: "Change the DO assignment for the Steam Heating"
+            steps: [
+                'Press the "OK" button to assign the target DO'
+                'Press the "Exit" button to exit. At this stage the software will ask you if you want to save the changes. To save your changes select the "Yes" button by pressing the left-right direction buttons and press the "OK" button to confirm the selection'
+                'The software will return to the "Service" menu'
+                'Detach the S13 socket plug from the back of the Control Panel'
+                'Remove the 7. socket terminal from the S13 socket plug by pushing down the fins of the socket terminal with the terminal removal tool'
+                'Attach the S13 socket plug into the S13 socket'
+                'Raise up the fins of the socket terminal with the terminal removal tool'
+                'Detach the S19 socket plug from the back of the Control Panel'
+                'Insert the socket terminal into the 6. socket of the S19 socket plug which corresponds to the DO which has been assigned in the DO assignment step in this video (Step no 1). Warning: You have to select the corresponding socket and socket plug if you choose another DO for this procedure. You can find a list of the DOs and their corresponding sockets on the back of the Control Panel'
+                'Attach the S19 socket plug into the S19 socket'
+                'Enter the "Diagnostic" screen by selecting and pressing the "Diagnostic" button'
+                'Select the "Steam Valve" DO on the "Digital Outputs" frame'
+                'Press the "OK" button to activate the "Steam Valve" DO'
+                'Check the voltage value by inserting one lead of the multimeter into any socket between the 12. and the 22. sockets on the S11 socket group and inserting the other lead of the multimeter into the 6. socket on the S19 socket group'
+            ]
+        ]
+        question: "Does ±24V DC exist on the DO?"
+        positive:
+            target: 'general/run-a-program'
+        negative:
+            target: 'steam-heating-do-available'
+    'run-a-program':
+        title: "Run A Program"
+        processes: [ # links to process descriptions
+            'run-a-program-to-monitor-the-problem'
+            'general/run-a-program'
+        ]
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-cable-steam-valve-cp'
