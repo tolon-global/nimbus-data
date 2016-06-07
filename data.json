@@ -58,7 +58,13 @@
     "we60/emergency-stop-alarm/button-pressed": {
       "title": "Check button pressed state",
       "processes": [
-        "we60/emergency-stop-alarm/check-esb-mechanically"
+        {
+          "title": "Check the Emergency Stop Button mechanically",
+          "steps": [
+            "Press the ESB to check if the button can be pressed"
+          ],
+          "source": "we60/emergency-stop-alarm/check-esb-mechanically"
+        }
       ],
       "question": "Is the button in the pressed state?",
       "positive": {
@@ -329,6 +335,13 @@
         "Check the screen for the alert box"
       ],
       "source": "we60/emergency-stop-alarm/check-emergency-stop-alarm"
+    },
+    "we60/emergency-stop-alarm/check-esb-mechanically": {
+      "title": "Check the Emergency Stop Button mechanically",
+      "steps": [
+        "Press the ESB to check if the button can be pressed"
+      ],
+      "source": "we60/emergency-stop-alarm/check-esb-mechanically"
     },
     "we60/general/left-panel-open": {
       "title": "Open the left front panel",
