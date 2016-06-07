@@ -10,6 +10,8 @@ rawdata = {}
 data =
     cards: {}
     processes: {}
+    tools: {}
+    parts: {}
 
 g = glob "**/*.cson", (e,f) ->
     sources = f
@@ -24,13 +26,18 @@ g = glob "**/*.cson", (e,f) ->
         for innername, fragment of file.processes
             data.processes["#{filename}/#{innername}"] = fragment
 
+        data.tools = file.tools if filename is 'tools'
+        data.parts = file.parts if filename is 'parts'
+
     for uri, card of data.cards
         expand_links uri, card
         embed_processes uri, card
         apply_templates uri, card
+        expand_assets uri, card
 
 
-    fs.writeFile "data.json", EJSON.stringify data, {indent: true}
+    fs.writeFile "data.json", EJSON.stringify data.cards, {indent: true}
+    # fs.writeFile "data-debug.json", EJSON.stringify data, {indent: true}
 
 expand_links = (uri, card) ->
     defaults = {positive: "Yes", negative: "No"}
@@ -68,6 +75,17 @@ apply_templates = (uri, card) ->
 
     merged_card = deepmerge data.cards[template_uri], card
     data.cards[uri] = merged_card
+
+expand_assets = (uri, card) ->
+    return unless card.processes?
+    for proc in card.processes
+        for asset_type in ['tools', 'parts']
+            continue unless proc[asset_type]?
+            proc[asset_type] = proc[asset_type].map (asset) ->
+                if asset.match /^(\w|[\/-])+$/
+                    data[asset_type][asset]
+                else
+                    asset
 
 mesh_uri = (context, local) ->
     context_fragments = context.split '/'
