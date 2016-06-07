@@ -76,13 +76,14 @@ cards:
         title: "Check Steam Heating DO"
         processes: [ # inline process descriptions
             title: "Check the Steam Heating DO on the Diagnostic"
+            video: 'ht_0025'
             steps: [
-                'Enter the "Main" menu by selecting and pressing the "Menu" button'
-                'Enter the "Service" menu by selecting and pressing the "Service" button'
-                'Enter the "Diagnostics" screen by selecting and pressing the "Diagnostics" button (The "Manual Control" button on versions prior to 1.0)'
-                'Select the "Steam Valve" DO on the "Digital Outputs" frame'
-                'Press the "OK" button to activate the "Steam Valve" DO'
-                'Insert one lead of the multimeter to any socket between the 12. and the 22. sockets on the S11 socket group and insert the other lead of the multimeter to the 7. socket on the S13 socket group'
+                '00:00.00': 'Enter the "Main" menu by selecting and pressing the "Menu" button'
+                '00:05.00': 'Enter the "Service" menu by selecting and pressing the "Service" button'
+                '00:09.00': 'Enter the "Diagnostics" screen by selecting and pressing the "Diagnostics" button (The "Manual Control" button on versions prior to 1.0)'
+                '00:15.00': 'Select the "Steam Valve" DO on the "Digital Outputs" frame'
+                '00:19.00': 'Press the "OK" button to activate the "Steam Valve" DO'
+                '00:23.00': 'Insert one lead of the multimeter to any socket between the 12. and the 22. sockets on the S11 socket group and insert the other lead of the multimeter to the 7. socket on the S13 socket group'
             ]
         ]
         question: "Is the DO functioning?"
@@ -94,13 +95,14 @@ cards:
         title: "Steam Heating DO available"
         processes: [ # inline process descriptions
             title: "Check the Steam Heating DO availability"
+            video: 'ht_0138'
             steps: [
-                'Enter the "Main" menu by selecting and pressing the "Menu" button'
-                'Enter the "Service" menu by selecting and pressing the "Service" button'
-                'Enter the "I/O Link" screen by selecting and pressing the "I/O Link" button'
-                'Select the Steam Valve DO'
-                'Press the "OK" button to enter the edit mode'
-                'Change the current DO to one of the available DOs by pressing the up-down direction buttons'
+                '00:00.00': 'Enter the "Main" menu by selecting and pressing the "Menu" button'
+                '00:07.00': 'Enter the "Service" menu by selecting and pressing the "Service" button'
+                '00:11.00': 'Enter the "I/O Link" screen by selecting and pressing the "I/O Link" button'
+                '00:16.00': 'Select the Steam Valve DO'
+                '00:38.00': 'Press the "OK" button to enter the edit mode'
+                '00:40.00': 'Change the current DO to one of the available DOs by pressing the up-down direction buttons'
             ]
         ]
         question: "Are there any unused available DOs?"
@@ -147,11 +149,12 @@ cards:
         title: "Check Cable Steam Valve CP"
         processes: [ # inline process descriptions
             title: "Check the cable between the steam control valve and the CP"
+            video: 'ht_0029'
             steps: [
-                'Unscrew the control valve socket holder screw from the steam control valve coil by using a screwdriver'
-                'Detach the steam valve coil socket from the steam control valve coil'
-                'Detach the terminal block of the socket from its housing by using the screwdriver as a lever'
-                'Check the voltage between the terminals of the terminal block by using a voltmeter'
+                '00:00.00': 'Unscrew the control valve socket holder screw from the steam control valve coil by using a screwdriver'
+                '00:10.00': 'Detach the steam valve coil socket from the steam control valve coil'
+                '00:17.00': 'Detach the terminal block of the socket from its housing by using the screwdriver as a lever'
+                '00:22.00': 'Check the voltage between the terminals of the terminal block by using a voltmeter'
             ]
         ]
         question: "Is the cable functional?"
@@ -203,13 +206,14 @@ cards:
         title: "Replace Steam Control Valve Coil"
         processes: [ # inline process descriptions
             title: "Replace the coil of the Steam Control Valve"
+            video: 'ht_0028'
             steps: [
-                'Unbolt the plastic nut which fastens the coil onto the coil armature on the back of the valve'
-                'Remove the coil from the steam control valve by pulling it downwards from the front side of the coil along the armature (back of the machine)'
-                'Install the new coil onto the steam control valve by pushing it upwards from the front side until the coil reaches the base of the armature (back of the machine)'
-                'Bolt the plastic nut which fastens the coil onto the armature whilst pushing the coil upwards'
-                'Attach the steam valve coil socket onto the new coil'
-                'Screw the coil socket onto the coil via its holder screw by using a screwdriver'
+                '00:00.00': 'Unbolt the plastic nut which fastens the coil onto the coil armature on the back of the valve'
+                '00:11.00': 'Remove the coil from the steam control valve by pulling it downwards from the front side of the coil along the armature (back of the machine)'
+                '00:24.00': 'Install the new coil onto the steam control valve by pushing it upwards from the front side until the coil reaches the base of the armature (back of the machine)'
+                '00:39.00': 'Bolt the plastic nut which fastens the coil onto the armature whilst pushing the coil upwards'
+                '00:52.00': 'Attach the steam valve coil socket onto the new coil'
+                '00:57.00': 'Screw the coil socket onto the coil via its holder screw by using a screwdriver'
             ]
             "general/run-a-program"
         ]
