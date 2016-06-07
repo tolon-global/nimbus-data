@@ -181,7 +181,7 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-steam-valve-coil'
-    ''check-steam-valve-coil':
+    'check-steam-valve-coil':
         title: "Check Steam Control Valve Coil"
         processes: [ # inline process descriptions
             title: "Check the coil of the steam control valve"
