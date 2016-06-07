@@ -136,7 +136,10 @@
             "skip": {
               "left-panel": "open"
             }
-          }
+          },
+          "tools": [
+            "n1-philips-screwdriver"
+          ]
         },
         {
           "title": "Replace the ESB",
@@ -149,6 +152,12 @@
             "Bolt the plastic nut onto its bolt at the back of the ESB",
             "Plug the contact of the ESB into its socket",
             "Screw the ESB cable terminals into the ESB contact socket"
+          ],
+          "tools": [
+            "voltage-tester"
+          ],
+          "parts": [
+            "th-0100-57392"
           ]
         },
         {
@@ -166,6 +175,9 @@
               "left-panel": "open"
             }
           },
+          "tools": [
+            "n1-philips-screwdriver"
+          ],
           "source": "we60/general/left-panel-close"
         },
         {
@@ -222,12 +234,18 @@
               "left-panel": "open"
             }
           },
+          "tools": [
+            "n1-philips-screwdriver"
+          ],
           "source": "we60/general/left-panel-open"
         },
         {
           "title": "Check the contacts on the ESB",
           "steps": [
             "Check the conductivity of the contact sockets with short-circuit test\nby inserting the multimeter leads into the contact sockets or the contact\nscrews and testing for both positions of the contact switch. The contact\nshould be in short-circuit when the switch is in open position (unpressed)\nand the contrary in closed position (pressed)"
+          ],
+          "tools": [
+            "multimeter"
           ]
         }
       ],
@@ -264,7 +282,10 @@
             "skip": {
               "left-panel": "open"
             }
-          }
+          },
+          "tools": [
+            "n1-philips-screwdriver"
+          ]
         },
         {
           "title": "Replace the contact on the ESB",
@@ -273,6 +294,12 @@
             "Remove the contact of the ESB from its back by using a screwdriver",
             "Plug the new ESB contact into its socket",
             "Screw the ESB cable terminals into the ESB contact socket"
+          ],
+          "tools": [
+            "voltage-tester"
+          ],
+          "parts": [
+            "th-0100-04857"
           ]
         },
         {
@@ -322,6 +349,9 @@
           "left-panel": "open"
         }
       },
+      "tools": [
+        "n1-philips-screwdriver"
+      ],
       "source": "we60/general/left-panel-open"
     },
     "we60/general/left-panel-close": {
@@ -339,6 +369,9 @@
           "left-panel": "open"
         }
       },
+      "tools": [
+        "n1-philips-screwdriver"
+      ],
       "source": "we60/general/left-panel-close"
     },
     "we60/general/power-on": {

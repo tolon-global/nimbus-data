@@ -14,6 +14,7 @@ processes: # naked process description (outside a flow/reusable)
                 'left-panel': 'open' # yes, the same!
             skip: # skip (gray out) this process if the tags below are true
                 'left-panel': 'open'
+        tools: ['n1-philips-screwdriver']
 
     'left-panel-close':
         title: 'Close the left front panel'
@@ -27,6 +28,7 @@ processes: # naked process description (outside a flow/reusable)
                 'left-panel': null # unset a tag
             only: # do this process only if the tags below are true
                 'left-panel': 'open'
+        tools: ['n1-philips-screwdriver']
 
     'power-on':
         title: 'Turn the power on'
