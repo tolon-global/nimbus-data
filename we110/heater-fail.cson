@@ -1,0 +1,15 @@
+cards:
+    'heating-type':
+        question: "Is this a steam-heated machine"
+        description: "Is there a steam valve going in?"
+        positive:
+            label: "Yes, steam"
+            target: 'we110/steam/heater-fail/check-steam-pressure'
+            autoselect: { heating: 'steam' }
+            set: { heating: 'steam' }
+
+        negative:
+            label: "No, electric"
+            target: 'check-power-coupling'
+            autoselect: { heating: 'electric' }
+            set: { heating: 'electric' }

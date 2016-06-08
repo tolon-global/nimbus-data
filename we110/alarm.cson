@@ -3,7 +3,7 @@ cards:
         title: "Alarm code"
         question: "What is the alarm code?"
         options: [
-            { title: "04 Heater fail", target: 'we110/heater-fail', tag: { alarm: 4 }}
+            { title: "04 Heater fail", target: 'we110/heater-fail/heating-type', tag: { alarm: 4 }}
             { title: "05 Emergency stop alarm", target: 'we110/emergency-stop-alarm', tag: { alarm: 5 }}
             { title: "06 AC Drive communication error", target: 'we110/ac-drive-communication-error', tag: { alarm: 6 }}
             { title: "09 Water intake fail", target: 'we110/water-intake-fail', tag: { alarm: 9 }}
@@ -17,5 +17,3 @@ cards:
             If you dismissed the alarm popup, you can get it again by going to the "Alarm statistics" page
             on the machine.
         '''
-
-        
