@@ -37,7 +37,10 @@
     "we110/steam/heater-fail/check-steam-pressure": {
       "title": "Check Steam Pressure",
       "processes": [
-        "we110/steam/heater-fail/check-the-steam-pressure"
+        {
+          "title": "Check the steam pressure",
+          "steps": []
+        }
       ],
       "question": "Is it sufficient?",
       "positive": {
@@ -52,7 +55,10 @@
     "we110/steam/heater-fail/adjust-steam-pressure": {
       "title": "Adjust Steam Pressure",
       "processes": [
-        "we110/steam/heater-fail/adjust-the-steam-pressure",
+        {
+          "title": "Adjust the steam pressure",
+          "steps": []
+        },
         "we110/steam/general/run-a-program"
       ],
       "question": "Is the problem solved?",
@@ -68,7 +74,10 @@
     "we110/steam/heater-fail/check-steam-vane": {
       "title": "Check Steam Vane",
       "processes": [
-        "we110/steam/heater-fail/check-the-steam-vane"
+        {
+          "title": "Check the steam vane",
+          "steps": []
+        }
       ],
       "question": "Is it open?",
       "positive": {
@@ -83,7 +92,10 @@
     "we110/steam/heater-fail/open-steam-vane": {
       "title": "Open Steam Vane",
       "processes": [
-        "we110/steam/heater-fail/open-the-steam-vane",
+        {
+          "title": "Open the steam vane",
+          "steps": []
+        },
         "we110/steam/general/run-a-program"
       ],
       "question": "Is the problem solved?",
@@ -99,7 +111,10 @@
     "we110/steam/heater-fail/check-strainer-clogging": {
       "title": "Check Strainer Clogging",
       "processes": [
-        "we110/steam/heater-fail/check-the-strainer-for-clogging"
+        {
+          "title": "Check the strainer for clogging",
+          "steps": []
+        }
       ],
       "question": "Is the strainer clogged?",
       "positive": {
@@ -114,7 +129,10 @@
     "we110/steam/heater-fail/clear-strainer": {
       "title": "Clear Strainer",
       "processes": [
-        "we110/steam/heater-fail/clear-the-strainer",
+        {
+          "title": "Clear the strainer",
+          "steps": []
+        },
         "we110/steam/general/run-a-program"
       ],
       "question": "Is the problem solved?",
@@ -130,17 +148,17 @@
     "we110/steam/heater-fail/check-steam-heating-do": {
       "title": "Check Steam Heating DO",
       "processes": [
-        "we110/steam/heater-fail/check-the steam-heating-do-on-the-diagnostic",
         {
-          "title": "Check Steam Heating DO",
-          "steps": [
-            "Enter the \"Main\" menu by selecting and pressing the \"Menu\" button",
-            "Enter the \"Service\" menu by selecting and pressing the \"Service\" button",
-            "Enter the \"Diagnostics\" screen by selecting and pressing the \"Diagnostics\" button (The \"Manual Control\" button on versions prior to 1.0)",
-            "Select the \"Steam Valve\" DO on the \"Digital Outputs\" frame",
-            "Press the \"OK\" button to activate the \"Steam Valve\" DO",
-            "Insert one lead of the multimeter to any socket between the 12. and the 22. sockets on the S11 socket group and insert the other lead of the multimeter to the 7. socket on the S13 socket group"
-          ]
+          "title": "Check the Steam Heating DO on the Diagnostic",
+          "video": "ht_0025",
+          "steps": {
+            "00:00.00": "Enter the \"Main\" menu by selecting and pressing the \"Menu\" button",
+            "00:05.00": "Enter the \"Service\" menu by selecting and pressing the \"Service\" button",
+            "00:09.00": "Enter the \"Diagnostics\" screen by selecting and pressing the \"Diagnostics\" button (The \"Manual Control\" button on versions prior to 1.0)",
+            "00:15.00": "Select the \"Steam Valve\" DO on the \"Digital Outputs\" frame",
+            "00:19.00": "Press the \"OK\" button to activate the \"Steam Valve\" DO",
+            "00:23.00": "Insert one lead of the multimeter to any socket between the 12. and the 22. sockets on the S11 socket group and insert the other lead of the multimeter to the 7. socket on the S13 socket group"
+          }
         }
       ],
       "question": "Is the DO functioning?",
@@ -150,6 +168,227 @@
       },
       "negative": {
         "target": "we110/steam/heater-fail/steam-heating-do-available",
+        "label": "No"
+      }
+    },
+    "we110/steam/heater-fail/steam-heating-do-available": {
+      "title": "Steam Heating DO available",
+      "processes": [
+        {
+          "title": "Check the Steam Heating DO availability",
+          "video": "ht_0138",
+          "steps": [
+            {
+              "00:00.00": "Enter the \"Main\" menu by selecting and pressing the \"Menu\" button",
+              "00:07.00": "Enter the \"Service\" menu by selecting and pressing the \"Service\" button",
+              "00:11.00": "Enter the \"I/O Link\" screen by selecting and pressing the \"I/O Link\" button",
+              "00:16.00": "Select the Steam Valve DO",
+              "00:38.00": "Press the \"OK\" button to enter the edit mode",
+              "00:40.00": "Change the current DO to one of the available DOs by pressing the up-down direction buttons"
+            }
+          ]
+        }
+      ],
+      "question": "Are there any unused available DOs?",
+      "positive": {
+        "target": "we110/steam/heater-fail/change-steam-heating-do",
+        "label": "Yes"
+      },
+      "negative": {
+        "target": "we110/steam/heater-fail/send-cp-to-service",
+        "label": "No"
+      }
+    },
+    "we110/steam/heater-fail/change-steam-heating-do": {
+      "title": "Change Steam Heating DO",
+      "processes": [
+        {
+          "title": "Change the DO assignment for the Steam Heating",
+          "steps": [
+            "Press the \"OK\" button to assign the target DO",
+            "Press the \"Exit\" button to exit. At this stage the software will ask you if you want to save the changes. To save your changes select the \"Yes\" button by pressing the left-right direction buttons and press the \"OK\" button to confirm the selection",
+            "The software will return to the \"Service\" menu",
+            "Detach the S13 socket plug from the back of the Control Panel",
+            "Remove the 7. socket terminal from the S13 socket plug by pushing down the fins of the socket terminal with the terminal removal tool",
+            "Attach the S13 socket plug into the S13 socket",
+            "Raise up the fins of the socket terminal with the terminal removal tool",
+            "Detach the S19 socket plug from the back of the Control Panel",
+            "Insert the socket terminal into the 6. socket of the S19 socket plug which corresponds to the DO which has been assigned in the DO assignment step in this video (Step no 1). Warning: You have to select the corresponding socket and socket plug if you choose another DO for this procedure. You can find a list of the DOs and their corresponding sockets on the back of the Control Panel",
+            "Attach the S19 socket plug into the S19 socket",
+            "Enter the \"Diagnostic\" screen by selecting and pressing the \"Diagnostic\" button",
+            "Select the \"Steam Valve\" DO on the \"Digital Outputs\" frame",
+            "Press the \"OK\" button to activate the \"Steam Valve\" DO",
+            "Check the voltage value by inserting one lead of the multimeter into any socket between the 12. and the 22. sockets on the S11 socket group and inserting the other lead of the multimeter into the 6. socket on the S19 socket group"
+          ]
+        }
+      ],
+      "question": "Does ±24V DC exist on the DO?",
+      "positive": {
+        "target": "we110/steam/general/run-a-program",
+        "label": "Yes"
+      },
+      "negative": {
+        "target": "we110/steam/heater-fail/steam-heating-do-available",
+        "label": "No"
+      }
+    },
+    "we110/steam/heater-fail/run-a-program": {
+      "title": "Run A Program",
+      "processes": [
+        "we110/steam/general/run-a-program"
+      ],
+      "positive": {
+        "target": "we110/steam/heater-fail/problem-solved",
+        "label": "Yes"
+      },
+      "negative": {
+        "target": "we110/steam/heater-fail/check-cable-steam-valve-cp",
+        "label": "No"
+      }
+    },
+    "we110/steam/heater-fail/check-cable-steam-valve-cp": {
+      "title": "Check Cable Steam Valve CP",
+      "processes": [
+        {
+          "title": "Check the cable between the steam control valve and the CP",
+          "video": "ht_0029",
+          "steps": {
+            "00:00.00": "Unscrew the control valve socket holder screw from the steam control valve coil by using a screwdriver",
+            "00:10.00": "Detach the steam valve coil socket from the steam control valve coil",
+            "00:17.00": "Detach the terminal block of the socket from its housing by using the screwdriver as a lever",
+            "00:22.00": "Check the voltage between the terminals of the terminal block by using a voltmeter"
+          }
+        }
+      ],
+      "question": "Is the cable functional?",
+      "positive": {
+        "target": "we110/steam/heater-fail/check-steam-valve-coil",
+        "label": "Yes"
+      },
+      "negative": {
+        "target": "we110/steam/heater-fail/replace-steam-valve-cp-cable",
+        "label": "No"
+      }
+    },
+    "we110/steam/heater-fail/replace-steam-valve-cp-cable": {
+      "title": "Replace/Repair Steam Valve-CP Cable",
+      "processes": [
+        {
+          "title": "Replace/Repair the cable between the Steam Control Valve and the CP",
+          "steps": [
+            "Burada tanımlanan sıra ile arka kapak açma, üst kapaklar (üstte üç ayrı parça kapak var) açma, ön kapak açma yapılır.",
+            "Kablo yolu üzerindeki klipsler açılır.",
+            "Pano içi makaron çıkartılır.",
+            "Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerinden çıkartılırlar.",
+            "Yukarıdaki maddede değinilen uçların cihaz arkasındaki karşı uçları da valf soketlerinden çıkartılırlar.",
+            "Yeni kablo valf uçları soketlerine takılır.",
+            "Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerine takılır.",
+            "Pano içi makaron kablolara sarılır.",
+            "Kablo yolu üzerindeki kablolar klipslenir."
+          ]
+        },
+        "we110/steam/general/check-do-on-diagnostic"
+      ],
+      "question": "Is the problem solved?",
+      "positive": {
+        "target": "we110/steam/heater-fail/problem-solved",
+        "label": "Yes"
+      },
+      "negative": {
+        "target": "we110/steam/heater-fail/check-steam-valve-coil",
+        "label": "No"
+      }
+    },
+    "we110/steam/heater-fail/check-steam-valve-coil": {
+      "title": "Check Steam Control Valve Coil",
+      "processes": [
+        {
+          "title": "Check the coil of the steam control valve",
+          "steps": [
+            "If the Steam Heating DO has been deactivated by the automatic logout process then re-activate it",
+            "Check the resistance value between the terminals of the steam control valve coil terminals by using a multimeter",
+            "Attach the terminal block of the socket into its housing",
+            "Insert the socket holder screw into its screw hole",
+            "Attach the steam valve coil socket onto the steam control valve coil",
+            "Screw the coil socket onto the coil via its holder screw by using a screwdriver"
+          ]
+        }
+      ],
+      "question": "Is the coil functioning?",
+      "positive": {
+        "target": "we110/steam/heater-fail/check-hose-pneumatic-valve-base",
+        "label": "Yes"
+      },
+      "negative": {
+        "target": "we110/steam/heater-fail/replace-steam-valve-coil",
+        "label": "No"
+      }
+    },
+    "we110/steam/heater-fail/replace-steam-valve-coil": {
+      "title": "Replace Steam Control Valve Coil",
+      "processes": [
+        {
+          "title": "Replace the coil of the Steam Control Valve",
+          "video": "ht_0028",
+          "steps": {
+            "00:00.00": "Unbolt the plastic nut which fastens the coil onto the coil armature on the back of the valve",
+            "00:11.00": "Remove the coil from the steam control valve by pulling it downwards from the front side of the coil along the armature (back of the machine)",
+            "00:24.00": "Install the new coil onto the steam control valve by pushing it upwards from the front side until the coil reaches the base of the armature (back of the machine)",
+            "00:39.00": "Bolt the plastic nut which fastens the coil onto the armature whilst pushing the coil upwards",
+            "00:52.00": "Attach the steam valve coil socket onto the new coil",
+            "00:57.00": "Screw the coil socket onto the coil via its holder screw by using a screwdriver"
+          }
+        },
+        "we110/steam/general/run-a-program"
+      ],
+      "question": "Is the problem solved?",
+      "positive": {
+        "target": "we110/steam/heater-fail/problem-solved",
+        "label": "Yes"
+      },
+      "negative": {
+        "target": "we110/steam/heater-fail/check-hose-pneumatic-valve-base",
+        "label": "No"
+      }
+    },
+    "we110/steam/heater-fail/check-hose-pneumatic-valve-base": {
+      "title": "Check Hose Between Steam Valve and CP",
+      "processes": [
+        {
+          "title": "Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve",
+          "steps": [
+            "Check the reliability of the hose between the Steam Piston Valve and the\nSteam Control Valve by detaching the hose from the steam output fitting\nof the Steam Control Valve and observing the air flow"
+          ]
+        }
+      ],
+      "question": "Is the hose valid?",
+      "positive": {
+        "target": "we110/steam/heater-fail/check-pneumatic-steam-valve",
+        "label": "Yes"
+      },
+      "negative": {
+        "target": "we110/steam/heater-fail/replace-hose-pneumatic-valve-vane",
+        "label": "No"
+      }
+    },
+    "we110/steam/heater-fail/replace-hose-pneumatic-valve-vane": {
+      "title": "Replace Hose Between Pneumatic Valve and Vane",
+      "processes": [
+        {
+          "title": "Replace the hose between the pneumatic steam valve and the steam vane with actuator",
+          "steps": [
+            "Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve by detaching the hose from the steam output fitting of the Steam Control Valve and observing the air flow"
+          ]
+        },
+        "we110/steam/general/run-a-program"
+      ],
+      "question": "Is the problem solved?",
+      "positive": {
+        "target": "we110/steam/heater-fail/problem-solved",
+        "label": "Yes"
+      },
+      "negative": {
+        "target": "we110/steam/heater-fail/send-cp-to-service",
         "label": "No"
       }
     },
