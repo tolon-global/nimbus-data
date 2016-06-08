@@ -106,7 +106,14 @@ cards:
                 'Pano içi makaron kablolara sarılır.'
                 'Kablo yolu üzerindeki kablolar klipslenir.'
             ]
-            "general/check-steam-do-on-diagnostic"
+            title: "Check the Steam Valve DO on the Diagnostic"
+            video: 'ht_0159'
+            steps:
+                '00:00.00': 'Enter the "Main" menu by selecting and pressing the "Menu" button'
+                '00:05.00': 'Enter the "Service" menu by selecting and pressing the "Service" button'
+                '00:09.00': 'Enter the "Diagnostics" screen by selecting and pressing the "Diagnostics" button (The "Manual Control" button on versions prior to 1.0)'
+                '00:15.00': 'Select the "Steam Valve" DO on the "Digital Outputs" frame'
+                '00:19.00': 'Press the "OK" button to activate the "Steam Valve" DO'
         ]
         question: "Is the problem solved?"
         positive:
