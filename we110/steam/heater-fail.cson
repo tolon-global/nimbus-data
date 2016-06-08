@@ -1,79 +1,4 @@
 cards:
-    'check-steam-pressure':
-        title: "Check Steam Pressure"
-        processes: [
-            title: "Check the steam pressure"
-            steps: []
-        ]
-        question: "Is it sufficient?"
-        positive:
-            target: 'check-steam-vane'
-        negative:
-            target: 'adjust-steam-pressure'
-
-    'adjust-steam-pressure':
-        title: "Adjust Steam Pressure"
-        processes: [
-            title: "Adjust the steam pressure"
-            steps: []
-            'general/run-a-program'
-        ]
-        question: "Is the problem solved?"
-        positive:
-            target: 'problem-solved'
-        negative:
-            target: 'check-steam-vane'
-
-    'check-steam-vane':
-        title: "Check Steam Vane"
-        processes: [
-            title: "Check the steam vane"
-            steps: []
-        ]
-        question: "Is it open?"
-        positive:
-            target: 'check-strainer-clogging'
-        negative:
-            target: 'open-steam-vane'
-
-    'open-steam-vane':
-        title: "Open Steam Vane"
-        processes: [
-            title: "Open the steam vane"
-            steps: []
-            'general/run-a-program'
-        ]
-        question: "Is the problem solved?"
-        positive:
-            target: 'problem-solved'
-        negative:
-            target: 'check-strainer-clogging'
-
-    'check-strainer-clogging':
-        title: "Check Strainer Clogging"
-        processes: [
-            title: "Check the strainer for clogging"
-            steps: []
-        ]
-        question: "Is the strainer clogged?"
-        positive:
-            target: 'check-steam-heating-do'
-        negative:
-            target: 'clear-strainer'
-
-    'clear-strainer':
-        title: "Clear Strainer"
-        processes: [
-            title: "Clear the strainer"
-            steps: []
-            "general/run-a-program"
-        ]
-        question: "Is the problem solved?"
-        positive:
-            target: 'problem-solved'
-        negative:
-            target: 'check-steam-heating-do'
-
     'check-steam-heating-do':
         title: "Check Steam Heating DO"
         processes: [
@@ -98,14 +23,13 @@ cards:
         processes: [
             title: "Check the Steam Heating DO availability"
             video: 'ht_0138'
-            steps: [
+            steps:
                 '00:00.00': 'Enter the "Main" menu by selecting and pressing the "Menu" button'
                 '00:07.00': 'Enter the "Service" menu by selecting and pressing the "Service" button'
                 '00:11.00': 'Enter the "I/O Link" screen by selecting and pressing the "I/O Link" button'
                 '00:16.00': 'Select the Steam Valve DO'
                 '00:38.00': 'Press the "OK" button to enter the edit mode'
                 '00:40.00': 'Change the current DO to one of the available DOs by pressing the up-down direction buttons'
-            ]
         ]
         question: "Are there any unused available DOs?"
         positive:
@@ -117,22 +41,22 @@ cards:
         title: "Change Steam Heating DO"
         processes: [
             title: "Change the DO assignment for the Steam Heating"
-            steps: [
-                'Press the "OK" button to assign the target DO'
-                'Press the "Exit" button to exit. At this stage the software will ask you if you want to save the changes. To save your changes select the "Yes" button by pressing the left-right direction buttons and press the "OK" button to confirm the selection'
-                'The software will return to the "Service" menu'
-                'Detach the S13 socket plug from the back of the Control Panel'
-                'Remove the 7. socket terminal from the S13 socket plug by pushing down the fins of the socket terminal with the terminal removal tool'
-                'Attach the S13 socket plug into the S13 socket'
-                'Raise up the fins of the socket terminal with the terminal removal tool'
-                'Detach the S19 socket plug from the back of the Control Panel'
-                'Insert the socket terminal into the 6. socket of the S19 socket plug which corresponds to the DO which has been assigned in the DO assignment step in this video (Step no 1). Warning: You have to select the corresponding socket and socket plug if you choose another DO for this procedure. You can find a list of the DOs and their corresponding sockets on the back of the Control Panel'
-                'Attach the S19 socket plug into the S19 socket'
-                'Enter the "Diagnostic" screen by selecting and pressing the "Diagnostic" button'
-                'Select the "Steam Valve" DO on the "Digital Outputs" frame'
-                'Press the "OK" button to activate the "Steam Valve" DO'
-                'Check the voltage value by inserting one lead of the multimeter into any socket between the 12. and the 22. sockets on the S11 socket group and inserting the other lead of the multimeter into the 6. socket on the S19 socket group'
-            ]
+            video: 'ht_0026'
+            steps:
+                '00:00.00': 'Press the "OK" button to assign the target DO'
+                '00:07.00': 'Press the "Exit" button to exit. At this stage the software will ask you if you want to save the changes. To save your changes select the "Yes" button by pressing the left-right direction buttons and press the "OK" button to confirm the selection'
+                '00:10.00': 'The software will return to the "Service" menu'
+                '00:16.00': 'Detach the S13 socket plug from the back of the Control Panel'
+                '00:28.00': 'Remove the 7. socket terminal from the S13 socket plug by pushing down the fins of the socket terminal with the terminal removal tool'
+                '00:50.00': 'Attach the S13 socket plug into the S13 socket'
+                '00:55.00': 'Raise up the fins of the socket terminal with the terminal removal tool'
+                '01:11.00': 'Detach the S19 socket plug from the back of the Control Panel'
+                '01:16.00': 'Insert the socket terminal into the 6. socket of the S19 socket plug which corresponds to the DO which has been assigned in the DO assignment step in this video (Step no 1). Warning: You have to select the corresponding socket and socket plug if you choose another DO for this procedure. You can find a list of the DOs and their corresponding sockets on the back of the Control Panel'
+                '01:23.00': 'Attach the S19 socket plug into the S19 socket'
+                '01:29.00': 'Enter the "Diagnostic" screen by selecting and pressing the "Diagnostic" button'
+                '01:35.00': 'Select the "Steam Valve" DO on the "Digital Outputs" frame'
+                '01:40.00': 'Press the "OK" button to activate the "Steam Valve" DO'
+                '01:44.00': 'Check the voltage value by inserting one lead of the multimeter into any socket between the 12. and the 22. sockets on the S11 socket group and inserting the other lead of the multimeter into the 6. socket on the S19 socket group'
         ]
         question: "Does ±24V DC exist on the DO?"
         positive:
@@ -251,9 +175,8 @@ cards:
         title: "Replace Hose Between Pneumatic Valve and Vane"
         processes: [
             title: "Replace the hose between the pneumatic steam valve and the steam vane with actuator"
-            steps: [
-                'Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve by detaching the hose from the steam output fitting of the Steam Control Valve and observing the air flow'
-            ]
+            steps:
+                '00:00.00': 'Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve by detaching the hose from the steam output fitting of the Steam Control Valve and observing the air flow'
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
