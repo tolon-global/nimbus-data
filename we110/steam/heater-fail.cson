@@ -106,7 +106,7 @@ cards:
                 'Pano içi makaron kablolara sarılır.'
                 'Kablo yolu üzerindeki kablolar klipslenir.'
             ]
-            "general/check-do-on-diagnostic"
+            "general/check-steam-do-on-diagnostic"
         ]
         question: "Is the problem solved?"
         positive:
