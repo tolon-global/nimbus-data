@@ -106,6 +106,7 @@ cards:
                 'Pano içi makaron kablolara sarılır.'
                 'Kablo yolu üzerindeki kablolar klipslenir.'
             ]
+        ,
             title: "Check the Steam Valve DO on the Diagnostic"
             video: 'ht_0159'
             steps:
@@ -124,15 +125,23 @@ cards:
     'check-steam-valve-coil':
         title: "Check Steam Control Valve Coil"
         processes: [
+            title: "Check the Steam Valve DO on the Diagnostic"
+            video: 'ht_0159'
+            steps:
+                '00:00.00': 'Enter the "Main" menu by selecting and pressing the "Menu" button'
+                '00:05.00': 'Enter the "Service" menu by selecting and pressing the "Service" button'
+                '00:09.00': 'Enter the "Diagnostics" screen by selecting and pressing the "Diagnostics" button (The "Manual Control" button on versions prior to 1.0)'
+                '00:15.00': 'Select the "Steam Valve" DO on the "Digital Outputs" frame'
+                '00:19.00': 'Press the "OK" button to activate the "Steam Valve" DO'
+        ,
             title: "Check the coil of the steam control valve"
-            steps: [
-                'If the Steam Heating DO has been deactivated by the automatic logout process then re-activate it'
-                'Check the resistance value between the terminals of the steam control valve coil terminals by using a multimeter'
-                'Attach the terminal block of the socket into its housing'
-                'Insert the socket holder screw into its screw hole'
-                'Attach the steam valve coil socket onto the steam control valve coil'
-                'Screw the coil socket onto the coil via its holder screw by using a screwdriver'
-            ]
+            video: 'ht_0027'
+            steps:
+                '00:26.00': 'Check the resistance value between the terminals of the steam control valve coil terminals by using a multimeter'
+                '00:26.00': 'Attach the terminal block of the socket into its housing'
+                '00:26.00': 'Insert the socket holder screw into its screw hole'
+                '00:26.00': 'Attach the steam valve coil socket onto the steam control valve coil'
+                '00:26.00': 'Screw the coil socket onto the coil via its holder screw by using a screwdriver'
         ]
         question: "Is the coil functioning?"
         positive:
@@ -164,13 +173,13 @@ cards:
         title: "Check Hose Between Steam Valve and CP"
         processes: [
             title: "Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve"
-            steps: [
-                '''
+            video: 'ht_0031'
+            steps:
+                '00:00.00': '''
                 Check the reliability of the hose between the Steam Piston Valve and the
                 Steam Control Valve by detaching the hose from the steam output fitting
                 of the Steam Control Valve and observing the air flow
                 '''
-            ]
         ]
         question: "Is the hose valid?"
         positive:
