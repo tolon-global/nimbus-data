@@ -351,14 +351,15 @@
       }
     },
     "we110/steam/heater-fail/problem-solved": {
-      "title": "Problem is solved",
+      "title": "Problem solved",
       "final": true,
-      "question": "Thanks"
+      "question": "Looks like your problem is solved :)"
     },
     "we110/steam/heater-fail/send-cp-to-service": {
-      "title": "Send the CP to the service",
+      "title": "CP to service",
       "final": true,
-      "question": "Thanks"
+      "question": "Send control panel to service",
+      "description": "The control panel needs to be serviced in the factory. Please contact\nTolon at service@tolon.com for instructions."
     },
     "we60/emergency-stop-alarm/check-alarm": {
       "title": "Check alarm",
