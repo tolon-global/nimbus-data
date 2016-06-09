@@ -167,10 +167,10 @@ cards:
         positive:
             target: 'problem-solved'
         negative:
-            target: 'check-hose-pneumatic-valve-base'
+            target: 'check-hose-piston-valve-control-valve'
 
-    'check-hose-pneumatic-valve-base':
-        title: "Check Hose Between Steam Valve and CP"
+    'check-hose-piston-valve-control-valve':
+        title: "Check Hose Between Steam Piston Valve and Steam Control Valve"
         processes: [
             title: "Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve"
             video: 'ht_0031'
@@ -185,14 +185,18 @@ cards:
         positive:
             target: 'check-pneumatic-steam-valve'
         negative:
-            target: 'replace-hose-pneumatic-valve-vane'
+            target: 'replace-hose-piston-valve-control-valve'
 
-    'replace-hose-pneumatic-valve-vane':
-        title: "Replace Hose Between Pneumatic Valve and Vane"
+    'replace-hose-piston-valve-control-valve':
+        title: "Replace Hose Between Steam Piston Valve and Steam Control Valve"
         processes: [
-            title: "Replace the hose between the pneumatic steam valve and the steam vane with actuator"
+            title: "Replace the hose between the Steam Piston Valve and the Steam Control Valve"
+            video: 'ht_0084'
             steps:
-                '00:00.00': 'Check the reliability of the hose between the Steam Piston Valve and the Steam Control Valve by detaching the hose from the steam output fitting of the Steam Control Valve and observing the air flow'
+                '00:00.00': 'Unplug the hose from the steam control valve'
+                '00:05.00': 'Follow the cable route and free the cable from its clips'
+                '00:20.00': 'Unplug the other end of the hose from the steam valve'
+                '00:25.00': 'Plug the new hose into the steam valve and get the hose clipsed and plug the other end of the hose into the steam control valve'
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
