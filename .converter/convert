@@ -12,6 +12,8 @@ data =
     processes: {}
     tools: {}
     parts: {}
+    assets:
+        videos: []
 
 g = glob "**/*.cson", (e,f) ->
     sources = f
@@ -34,10 +36,13 @@ g = glob "**/*.cson", (e,f) ->
         embed_processes uri, card
         apply_templates uri, card
         expand_assets uri, card
+        identify_videos uri, card
 
+    data.assets.videos = unique data.assets.videos
 
     fs.writeFile "data.json", EJSON.stringify data.cards, {indent: true}
     # fs.writeFile "data-debug.json", EJSON.stringify data, {indent: true}
+    fs.writeFile "assets.json", EJSON.stringify data.assets, {indent: true}
 
 expand_links = (uri, card) ->
     defaults = {positive: "Yes", negative: "No"}
@@ -91,3 +96,13 @@ mesh_uri = (context, local) ->
     context_fragments = context.split '/'
     local_fragments = local.split '/'
     [context_fragments[0...-local_fragments.length]..., local_fragments...].join '/'
+
+identify_videos = (uri, card) ->
+    return unless card.processes?
+    for proc in card.processes
+        data.assets.videos.push proc.video if proc.video?
+
+unique = (array) ->
+    hash = {}
+    hash[e] = e for e in array
+    (key for key, value of hash)
