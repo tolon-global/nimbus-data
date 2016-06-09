@@ -239,10 +239,10 @@ cards:
 
     'problem-solved':
         title: "Problem is solved"
-        final: True
+        final: true
         question: "Thanks"
 
     'send-cp-to-service':
         title: "Send the CP to the service"
-        final: True
+        final: true
         question: "Thanks"
