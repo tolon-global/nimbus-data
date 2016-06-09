@@ -220,6 +220,31 @@ cards:
         negative:
             target: 'replace-steam-piston-valve'
 
+    'replace-steam-piston-valve':
+        title: "Replace Steam Piston Valve"
+        processes: [
+            title: "Replace the Steam Piston Valve"
+            video: 'ht_0033'
+            steps:
+                '00:00.00': 'Unplug the air hose from its fitting on the steam piston valve'
+                '00:10.00': 'Detach the steam piston valve from the connection pipe by unbolting it using a pipe wrench'
+                '00:42.00': 'Attach the new steam piston valve onto the connection pipe by bolting it using a pipe wrench. Tighten the valve whilst bolting it'
+                '01:44.00': 'Plug the air hose into the fitting on the steam piston valve'
+                #'00:00.00': 'Enter the "Main" menu by pressing the "Menu" button'
+                #'00:00.00': 'Enter the "Service" menu by pressing the "Service" button'
+                #'00:00.00': 'Enter the "Diagnostics" screen by pressing the "Diagnostics" button (The "Manual Control" button on versions prior to 1.0)'
+                '01:54.00': 'Select the "Steam Valve" DO on the "Digital Outputs" frame'
+                '01:58.00': 'Press the "OK" button to activate the "Steam Valve" DO'
+                '02:00.00': 'Press the "OK" button to deactivate the "Steam Valve" DO'
+                '02:04.00': 'Check the movement of the indicator rod on the steam piston valve visually'
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'send-cp-to-service'
+
     'problem-solved':
         title: "Problem is solved"
         final: True
