@@ -1,0 +1,11 @@
+cards:
+    'check-vacuum-parameters':
+        title: "Check Vacuum Parameters"
+        processes: [
+            title: "Check the vacuum related system parameters"
+        ]
+        question: "Have they been modified?"
+        positive:
+            target: 'revert-parameters-to-original'
+        negative:
+            target: 'check-sail-switch'
