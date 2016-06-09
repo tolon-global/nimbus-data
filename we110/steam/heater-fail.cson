@@ -95,17 +95,9 @@ cards:
         title: "Replace/Repair Steam Valve-CP Cable"
         processes: [
             title: "Replace/Repair the cable between the Steam Control Valve and the CP"
-            steps: [
-                'Burada tanımlanan sıra ile arka kapak açma, üst kapaklar (üstte üç ayrı parça kapak var) açma, ön kapak açma yapılır.'
-                'Kablo yolu üzerindeki klipsler açılır.'
-                'Pano içi makaron çıkartılır.'
-                'Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerinden çıkartılırlar.'
-                'Yukarıdaki maddede değinilen uçların cihaz arkasındaki karşı uçları da valf soketlerinden çıkartılırlar.'
-                'Yeni kablo valf uçları soketlerine takılır.'
-                'Kontrol paneli arkasındaki buhar, sıcak su, soğuk su, tahliye, devrilme (yukarı-aşağı) DO kabloları ve ortak uç (eksi) -24V DC kablosu soketlerine takılır.'
-                'Pano içi makaron kablolara sarılır.'
-                'Kablo yolu üzerindeki kablolar klipslenir.'
-            ]
+            video : 'ht_0030'
+            steps:
+                '00:00.00': 'Open the rear cover, the top covers, and the front left door and replace the cable'
         ,
             title: "Check the Steam Valve DO on the Diagnostic"
             video: 'ht_0159'
