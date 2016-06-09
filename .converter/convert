@@ -107,7 +107,6 @@ secondify_timecodes = (uri, card) ->
     return unless card.processes?
 
     for proc in card.processes
-        debugger if uri is 'we60/emergency-stop-alarm/replace-esb' and proc.source is "we60/general/left-panel-open"
         continue unless proc.steps? and proc.steps.constructor is Object
         for timecode, subtitle of proc.steps when match = timecode.match /(\d\d):(\d\d)\.(\d\d)/
             [minutes, seconds, miliseconds] = match[1..3].map(Number)
