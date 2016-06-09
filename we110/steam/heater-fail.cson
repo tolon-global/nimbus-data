@@ -183,7 +183,7 @@ cards:
         ]
         question: "Is the hose valid?"
         positive:
-            target: 'check-pneumatic-steam-valve'
+            target: 'check-air-steam-piston-valve'
         negative:
             target: 'replace-hose-piston-valve-control-valve'
 
@@ -203,7 +203,22 @@ cards:
         positive:
             target: 'problem-solved'
         negative:
+            target: 'check-air-steam-piston-valve'
+
+    'check-air-steam-piston-valve':
+        title: "Check air input of Steam Piston Valve"
+        processes: [
+            title: "Check the air input of the Steam Piston Valve"
+            video: 'ht_0032'
+            steps:
+                '00:09.00': 'Unplug the air hose from its fitting on the steam piston valve'
+                '00:11.00': 'Check the airflow by holding the tip of the hose towards your hand or towards something which can flap by airflow'
+        ]
+        question: "Is the piston valve functioning?"
+        positive:
             target: 'send-cp-to-service'
+        negative:
+            target: 'replace-steam-piston-valve'
 
     'problem-solved':
         title: "Problem is solved"
