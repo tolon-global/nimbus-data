@@ -18,15 +18,109 @@
         "title": "No time",
         "description": "Choose **No time** if working hours are over, or if you have\nanother appointment you must keep, and you will come back for this later.",
         "target": "escape/general/no-time"
-      },
-      {
-        "title": "No skills",
-        "description": "Choose **No skills** if you do not have the required training or\ncertification to complete this procedure, or if you need the\nhelp of others to complete it.",
-        "target": "escape/general/no-skills"
       }
     ],
     "positive": {
       "label": "That's it"
+    },
+    "negative": {
+      "label": "Something else",
+      "target": "escape/general/something-else"
+    }
+  },
+  "escape/general/no-parts": {
+    "class": "escape",
+    "title": "Order parts",
+    "question": "Do you need to order parts?",
+    "positive": {
+      "label": "Yes, order",
+      "target": "escape/general/order-parts"
+    },
+    "negative": {
+      "label": "No need",
+      "target": "escape/general/continue-later"
+    }
+  },
+  "escape/general/order-parts": {
+    "class": "escape",
+    "title": "Order parts",
+    "question": "What parts do you need?",
+    "checklist": "$parts",
+    "positive": {
+      "label": "Order",
+      "target": "escape/general/order-parts-done"
+    },
+    "negative": {
+      "label": "Something else",
+      "target": "escape/general/something-else"
+    }
+  },
+  "escape/general/order-parts-done": {
+    "class": "escape",
+    "title": "Order sent",
+    "question": "Order received",
+    "description": "Your order has been received. You can continue this service call by\nentering the machine serial number again.",
+    "final": true
+  },
+  "escape/general/continue-later": {
+    "class": "escape",
+    "title": "Continue later",
+    "question": "Continue later",
+    "description": "Your progress is saved. You can continue this service call by\nentering the machine serial number again.",
+    "final": true
+  },
+  "escape/general/something-else": {
+    "class": "escape",
+    "title": "Something else",
+    "question": "Please describe the problem",
+    "input": {
+      "tag": "serial",
+      "type": "textarea",
+      "description": "Please describe the problem to the best of your understanding"
+    },
+    "positive": {
+      "label": "Done",
+      "target": "escape/general/continue-later"
+    },
+    "negative": {
+      "label": "I can't",
+      "target": "escape/general/continue-later"
+    }
+  },
+  "escape/general/no-tools": {
+    "class": "escape",
+    "title": "No tools",
+    "question": "What tools are you missing?",
+    "checklist": "$tools",
+    "positive": {
+      "label": "Selected",
+      "target": "escape/general/continue-later"
+    },
+    "negative": {
+      "label": "Something else",
+      "target": "escape/general/something-else"
+    }
+  },
+  "escape/general/no-time": {
+    "class": "escape",
+    "title": "No time",
+    "question": "Why is time not enough?",
+    "options": [
+      {
+        "title": "End of workday",
+        "target": "escape/general/continue-later"
+      },
+      {
+        "title": "Facilites closing",
+        "target": "escape/general/continue-later"
+      },
+      {
+        "title": "Other commitments",
+        "target": "escape/general/continue-later"
+      }
+    ],
+    "positive": {
+      "label": "Done"
     },
     "negative": {
       "label": "Something else",

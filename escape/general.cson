@@ -26,14 +26,14 @@ cards:
                 another appointment you must keep, and you will come back for this later.
             """
             target: 'no-time'
-        ,
-            title: "No skills"
-            description: """
-                Choose **No skills** if you do not have the required training or
-                certification to complete this procedure, or if you need the
-                help of others to complete it.
-            """
-            target: 'no-skills'
+        # ,
+        #     title: "No skills"
+        #     description: """
+        #         Choose **No skills** if you do not have the required training or
+        #         certification to complete this procedure, or if you need the
+        #         help of others to complete it.
+        #     """
+        #     target: 'no-skills'
         ]
         positive:
             label: "That's it"
@@ -41,3 +41,94 @@ cards:
         negative:
             label: "Something else"
             target: "something-else"
+
+    'no-parts':
+        class: "escape"
+        title: "Order parts"
+        question: "Do you need to order parts?"
+        positive:
+            label: "Yes, order"
+            target: "order-parts"
+        negative:
+            label: "No need"
+            target: 'continue-later'
+
+    'order-parts':
+        class: "escape"
+        title: "Order parts"
+        question: "What parts do you need?"
+        checklist: '$parts'
+        positive:
+            label: "Order"
+            target: 'order-parts-done'
+        negative:
+            label: "Something else"
+            target: 'something-else'
+
+    'order-parts-done':
+        class: "escape"
+        title: "Order sent"
+        question: "Order received"
+        description: """
+            Your order has been received. You can continue this service call by
+            entering the machine serial number again.
+        """
+        final: true
+
+    'continue-later':
+        class: "escape"
+        title: "Continue later"
+        question: "Continue later"
+        description: """
+            Your progress is saved. You can continue this service call by
+            entering the machine serial number again.
+        """
+        final: true
+
+    'something-else':
+        class: "escape"
+        title: "Something else"
+        question: "Please describe the problem"
+        input:
+            tag: 'serial'
+            type: "textarea"
+            description: "Please describe the problem to the best of your understanding"
+        positive:
+            label: "Done"
+            target: 'continue-later'
+        negative:
+            label: "I can't"
+            target: 'continue-later'
+
+    'no-tools':
+        class: "escape"
+        title: "No tools"
+        question: "What tools are you missing?"
+        checklist: "$tools"
+        positive:
+            label: "Selected"
+            target: 'continue-later'
+        negative:
+            label: "Something else"
+            target: 'something-else'
+
+    'no-time':
+        class: "escape"
+        title: "No time"
+        question: "Why is time not enough?"
+        options: [
+            title: "End of workday"
+            target: 'continue-later'
+        ,
+            title: "Facilites closing"
+            target: 'continue-later'
+        ,
+            title: "Other commitments"
+            target: 'continue-later'
+        ]
+        positive:
+            label: "Done"
+
+        negative:
+            label: "Something else"
+            target: 'something-else'
