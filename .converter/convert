@@ -38,10 +38,12 @@ g = glob "**/*.cson", (e,f) ->
         expand_assets uri, card
         identify_videos uri, card
         secondify_timecodes uri, card
+        console.log uri
 
     data.assets.videos = unique data.assets.videos
 
     fs.writeFile "data.json", EJSON.stringify data.cards, {indent: true}
+    console.log "#{Object.keys(data.cards).length} cards written"
     # fs.writeFile "data-debug.json", EJSON.stringify data, {indent: true}
     fs.writeFile "assets.json", EJSON.stringify data.assets, {indent: true}
 
