@@ -133,6 +133,9 @@ cards:
         title: "Clean Lint Filter"
         processes: [
             title: "Clean the lint filter"
+            steps: [
+                'Clean the lint filter by using a brush'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -145,6 +148,12 @@ cards:
         title: "Check Fan Motor Rotation Direction"
         processes: [
             title: "Check the rotation direction of the fan motor"
+            steps: [
+                'Open the rear middle panel'
+                'Start any program'
+                'Check the fan motor to see its rotation direction. The correct direction is stated by the direction label.'
+                'Stop the program'
+            ]
         ]
         question: "Is it rotating CW?"
         positive:
