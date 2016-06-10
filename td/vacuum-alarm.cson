@@ -25,10 +25,32 @@ cards:
     'check-sail-switch':
         title: "Check Operation of Sail Switch"
         processes: [
-            title: "Check the operation of the sail switch "
+            title: "Check the operation of the sail switch"
         ]
         question: "Is it operating?"
         positive:
             target: 'check-sail-switch-flap'
         negative:
             target: 'check-loading-door-closing'
+
+    'check-loading-door-closing':
+        title: "Check closing of Loading Door"
+        processes: [
+            title: "Check the closing of the loading door"
+        ]
+        question: "Is it closing?"
+        positive:
+            target: 'check-lint-filter-closing'
+        negative:
+            target: 'fix-loading-door-closing'
+
+    'check-lint-filter-closing'
+        title: "Check closing of Lint Filter Door"
+        processes: [
+            title: "Check the closing of the lint filter door"
+        ]
+        question: "Is it closing?"
+        positive:
+            target: 'check-lint-filter-dust'
+        negative:
+            target: 'close-lint-filter-door'
