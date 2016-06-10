@@ -31,7 +31,7 @@ cards:
                 'Press the "Cancel" button in the parameter menu and answer the question "Save ?" with "Y" (Yes) to save the changes.'
                 'If another vacuum parameter has been changed, too, repeat the steps 1 to 6 for the related parameter.'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -92,7 +92,7 @@ cards:
             steps: [
                 'Fix the air gap of the loading door'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -107,7 +107,7 @@ cards:
             steps: [
                 'Close the lint filter door to make the machine air tight'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -136,7 +136,7 @@ cards:
             steps: [
                 'Clean the lint filter by using a brush'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -175,7 +175,7 @@ cards:
                 'Turn on the power'
                 'Check if the fan motor is rotating in the correct direction'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -208,7 +208,7 @@ cards:
                 'Clean the exhaust'
                 'Bolt the exhaust pipeline back to the machine'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -246,7 +246,7 @@ cards:
                 'Close the rear middle panel'
                 'Turn on the power'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -258,6 +258,11 @@ cards:
         title: "Check Sail Switch Flap Pallet"
         processes: [
             title: "Check the sail switch flap pallet"
+            steps: [
+                'Turn off power'
+                'Open the rear middle panel'
+                "Check the sail switch flap pallet to see if it's bent"
+            ]
         ]
         question: "Is it set correctly?"
         positive:
@@ -269,7 +274,12 @@ cards:
         title: "Reset Sail Switch Flap"
         processes: [
             title: "Reset the sail switch flap"
-            "general/run-a-program"
+            steps: [
+                'Unbolt the sail switch bolts'
+                'Reset the sail switch to align the sail switch flap pallet to the correct position'
+                'Bolt the sail switch bolts'
+            ]
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -277,10 +287,17 @@ cards:
         negative:
             target: 'check-sail-switch-terminal-cable'
 
-    'check-sail-switch-terminal-cable'
+    'check-sail-switch-terminal-cable':
         title: "Check Cable between Sail Switch and Electric Terminal"
         processes: [
             title: "Check the cable between the sail switch and the electric terminal"
+            steps: [
+                'Turn off the power'
+                'Open the rear middle panel'
+                'Unplug the power plugs from the sail switch'
+                'Detach the vacuum sensor cables from the Electric Terminal'
+                'Check the contiunity between the terminals of the cable pairs by using a multimeter'
+            ]
         ]
         question: "Is the cable functional?"
         positive:
@@ -288,11 +305,19 @@ cards:
         negative:
             target: 'replace-sail-switch-terminal-cable'
 
-    'replace-sail-switch-terminal-cable'
+    'replace-sail-switch-terminal-cable':
         title: "Replace Cable between Sail Switch and Electric Terminal"
         processes: [
             title: "Replace/Repair the cable between the sail switch and the electric terminal"
-            "general/run-a-program"
+            steps: [
+                'Turn off the power'
+                'Remove the faulty cable'
+                'Replace it with a new cable'
+                'Plug in the cable plugs on its switch side terminals'
+                'Plug the terminal plugs onto the sail switch terminals'
+                'Insert the terminals on the electric terminal side into their sockets'
+            ]
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -300,10 +325,16 @@ cards:
         negative:
             target: 'check-terminal-control-panel-cable'
 
-    'check-terminal-control-panel-cable'
+    'check-terminal-control-panel-cable':
         title: "Check Cable between Electric Terminal and Control Panel"
         processes: [
             title: "Check the cable between the electric terminal and the control panel"
+            steps: [
+                'Turn off the power'
+                'Detach the vacuum sensor cables from the Electric Terminal'
+                'Detach the vacuum sensor cables from the Control Panel'
+                'Check the continuity between the terminals of the cable pairs by using a multimeter'
+            ]
         ]
         question: "Is the cable functional?"
         positive:
@@ -311,11 +342,18 @@ cards:
         negative:
             target: 'replace-terminal-control-panel-cable'
 
-    'replace-terminal-control-panel-cable'
+    'replace-terminal-control-panel-cable':
         title: "Replace Cable between Electric Terminal and Control Panel"
         processes: [
             title: "Replace/Repair the cable between the electric terminal and the control panel"
-            "general/run-a-program"
+            steps: [
+                'Turn off the power'
+                'Remove the faulty cable'
+                'Replace it with a new cable'
+                'Attach the vacuum sensor cables to the Electric Terminal'
+                'Attach the vacuum sensor cables to the Control Panel'
+            ]
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -323,10 +361,23 @@ cards:
         negative:
             target: 'change-vacuum-di'
 
-    'change-vacuum-di'
+    'change-vacuum-di':
         title: "Change Vacuum Sensor DI Assignment"
         processes: [
             title: "Change the DI assignment for the Vacuum Sensor"
+            steps: [
+                'Shut off electricity to the dryer by pressing the "Emergency Stop" button'
+                'Press and hold the "Menu" button'
+                'Release the "Emergency Stop" button to power on the dryer'
+                'Enter the password by pressing the up-down direction buttons to change the numbers in each digit and press the stop-start (left-right direction) buttons to change the digits'
+                'Complete the password entry by pressing the "OK" button'
+                'Select the Digital Input (DI) menu by pressing the up-down direction buttons'
+                'Press the "OK" button to enter the DI menu'
+                'Select DI4 by pressing the up-down direction buttons'
+                'Press the "OK" button to set the DI4 value'
+                'Press the up-down direction buttons to select an available input'
+                'Press the "OK" button to save the changes'
+            ]
         ]
         question: "Is the problem solved?"
         positive:
@@ -343,3 +394,12 @@ cards:
         title: "Send the CP to the service"
         final: true
         question: "Thanks"
+
+processes:
+    'run-a-program':
+        title: "Run a program to monitor the problem"
+        steps: [
+            'Select any program on the main screen'
+            'Press the "OK" button to enter the program screen'
+            'Press the "Start" button to start the program'
+        ]

@@ -353,12 +353,21 @@
     "title": "Check Vacuum Parameters",
     "processes": [
       {
-        "title": "Check the vacuum related system parameters"
+        "title": "Check the vacuum related system parameters",
+        "steps": [
+          "Shut off electricity to the dryer by pressing the \"Emergency Stop\" button.",
+          "Press and hold the \"Up Direction\" button.",
+          "Release the \"Emergency Stop\" button to power on the dryer.",
+          "Enter the password by pressing the up-down direction buttons to change the numbers in each digit and press the stop-start (left-right direction) buttons to change the digits.",
+          "Complete the password entry by pressing the \"OK\" button.",
+          "The controller will display the first parameter in the list.",
+          "Check the 59. and 60. parameters to see if they have been changed by pressing the up-down direction buttons to change the parameter number."
+        ]
       }
     ],
     "question": "Have they been modified?",
     "positive": {
-      "target": "td/vacuum-alarm/revert-parameters-to-original",
+      "target": "deadend/deadend",
       "label": "Yes"
     },
     "negative": {
@@ -370,13 +379,21 @@
     "title": "Revert parameters back to original settings",
     "processes": [
       {
-        "title": "Revert the parameters back to their original settings"
+        "title": "Revert the vacuum parameters back to their original settings",
+        "steps": [
+          "Select the changed vacuum parameter.",
+          "Press the \"OK\" button to switch to value editing mode.",
+          "Change the values by pressing the up-down direction buttons. Change digits by pressing the stop-start (left-right direction) buttons.",
+          "When the value has been defined press the \"Cancel\" button to return to the parameter menu.",
+          "Press the \"Cancel\" button in the parameter menu and answer the question \"Save ?\" with \"Y\" (Yes) to save the changes.",
+          "If another vacuum parameter has been changed, too, repeat the steps 1 to 6 for the related parameter."
+        ]
       },
       "deadend/deadend"
     ],
     "question": "Is the problem solved?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/problem-solved",
       "label": "Yes"
     },
     "negative": {
@@ -388,7 +405,14 @@
     "title": "Check Operation of Sail Switch",
     "processes": [
       {
-        "title": "Check the operation of the sail switch"
+        "title": "Check the operation of the sail switch",
+        "steps": [
+          "Open the electic cabinet door",
+          "Enter the Diagnostics menu",
+          "Select DI4 (Vacuum DI)",
+          "Press the sail switch flap",
+          "Check if the DI4 value is changing when you press and release the flap"
+        ]
       }
     ],
     "question": "Is it operating?",
@@ -405,7 +429,10 @@
     "title": "Check closing of Loading Door",
     "processes": [
       {
-        "title": "Check the closing of the loading door"
+        "title": "Check the closing of the loading door",
+        "steps": [
+          "Check if the loading door is air tight"
+        ]
       }
     ],
     "question": "Is it closing?",
@@ -422,7 +449,10 @@
     "title": "Check closing of Lint Filter Door",
     "processes": [
       {
-        "title": "Check the closing of the lint filter door"
+        "title": "Check the closing of the lint filter door",
+        "steps": [
+          "Check if the lint filter door is air tight"
+        ]
       }
     ],
     "question": "Is it closing?",
@@ -439,13 +469,16 @@
     "title": "Fix closing of Loading Door Problem",
     "processes": [
       {
-        "title": "Fix the closing problem of the loading door"
+        "title": "Fix the closing problem of the loading door",
+        "steps": [
+          "Fix the air gap of the loading door"
+        ]
       },
       "deadend/deadend"
     ],
     "question": "Is the problem solved?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/problem-solved",
       "label": "Yes"
     },
     "negative": {
@@ -457,13 +490,16 @@
     "title": "Close Lint Filter Door",
     "processes": [
       {
-        "title": "Close the lint filter door correctly"
+        "title": "Close the lint filter door correctly",
+        "steps": [
+          "Close the lint filter door to make the machine air tight"
+        ]
       },
       "deadend/deadend"
     ],
     "question": "Is the problem solved?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/problem-solved",
       "label": "Yes"
     },
     "negative": {
@@ -475,7 +511,10 @@
     "title": "Check Dust on Lint Filter",
     "processes": [
       {
-        "title": "Check the dustiness of the lint filter"
+        "title": "Check the dustiness of the lint filter",
+        "steps": [
+          "Check if the lint filter is dusty"
+        ]
       }
     ],
     "question": "Is the filter dusty?",
@@ -492,13 +531,16 @@
     "title": "Clean Lint Filter",
     "processes": [
       {
-        "title": "Clean the lint filter"
+        "title": "Clean the lint filter",
+        "steps": [
+          "Clean the lint filter by using a brush"
+        ]
       },
       "deadend/deadend"
     ],
     "question": "Is the problem solved?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/problem-solved",
       "label": "Yes"
     },
     "negative": {
@@ -510,7 +552,13 @@
     "title": "Check Fan Motor Rotation Direction",
     "processes": [
       {
-        "title": "Check the rotation direction of the fan motor"
+        "title": "Check the rotation direction of the fan motor",
+        "steps": [
+          "Open the rear middle panel",
+          "Start any program",
+          "Check the fan motor to see its rotation direction. The correct direction is stated by the direction label.",
+          "Stop the program"
+        ]
       }
     ],
     "question": "Is it rotating CW?",
@@ -527,13 +575,23 @@
     "title": "Fix Fan Motor Rotation Direction",
     "processes": [
       {
-        "title": "Fix the rotation direction of the fan motor"
+        "title": "Fix the rotation direction of the fan motor",
+        "steps": [
+          "Turn off the power",
+          "Open the rear middle panel",
+          "Open the fan motor cover",
+          "Change the directivity of two cables coming from the source electrical terminal",
+          "Close the fan motor cover",
+          "Close the rear middle panel",
+          "Turn on the power",
+          "Check if the fan motor is rotating in the correct direction"
+        ]
       },
       "deadend/deadend"
     ],
     "question": "Is the problem solved?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/problem-solved",
       "label": "Yes"
     },
     "negative": {
@@ -545,7 +603,13 @@
     "title": "Check Exhaust Outlet",
     "processes": [
       {
-        "title": "Check the exhaust outlet"
+        "title": "Check the exhaust outlet",
+        "steps": [
+          "Turn off the power",
+          "Wait for the exhaust pipes to cooldown",
+          "Unbolt the exhaust pipeline from the machine",
+          "Inspect the exhaust pipeline to see if it's clogged visually"
+        ]
       }
     ],
     "question": "Is the exhaust blocked?",
@@ -562,13 +626,17 @@
     "title": "Clean/Clear Exhaust",
     "processes": [
       {
-        "title": "Clean/Clear the exhaust"
+        "title": "Clean/Clear the exhaust",
+        "steps": [
+          "Clean the exhaust",
+          "Bolt the exhaust pipeline back to the machine"
+        ]
       },
       "deadend/deadend"
     ],
     "question": "Is the problem solved?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/problem-solved",
       "label": "Yes"
     },
     "negative": {
@@ -580,7 +648,12 @@
     "title": "Check Sail Switch Flap",
     "processes": [
       {
-        "title": "Check the flap of the sail switch"
+        "title": "Check the flap of the sail switch",
+        "steps": [
+          "Open the electic cabinet door",
+          "Start any program",
+          "Check the sail switch flap in the electric cabinet to see if it's being sucked by the vacuum and it sticks to the opening"
+        ]
       }
     ],
     "question": "Is the flap functioning?",
@@ -597,13 +670,23 @@
     "title": "Replace Sail Switch Flap",
     "processes": [
       {
-        "title": "Replace the sail switch flap"
+        "title": "Replace the sail switch flap",
+        "steps": [
+          "Turn off the power",
+          "Open the rear middle panel",
+          "Open the sail switch cover by unbolting the flap bolts",
+          "Take out the faulty flap from its slit. Note the slit being used.",
+          "Insert the new flap into the correct slit",
+          "Close the sail switch cover by bolting the flap bolts",
+          "Close the rear middle panel",
+          "Turn on the power"
+        ]
       },
       "deadend/deadend"
     ],
     "question": "Is the problem solved?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/problem-solved",
       "label": "Yes"
     },
     "negative": {
@@ -615,12 +698,17 @@
     "title": "Check Sail Switch Flap Pallet",
     "processes": [
       {
-        "title": "Check the sail switch flap pallet"
+        "title": "Check the sail switch flap pallet",
+        "steps": [
+          "Turn off power",
+          "Open the rear middle panel",
+          "Check the sail switch flap pallet to see if it's bent"
+        ]
       }
     ],
     "question": "Is it set correctly?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/check-sail-switch-terminal-cable",
       "label": "Yes"
     },
     "negative": {
@@ -632,19 +720,164 @@
     "title": "Reset Sail Switch Flap",
     "processes": [
       {
-        "title": "Reset the sail switch flap"
+        "title": "Reset the sail switch flap",
+        "steps": [
+          "Unbolt the sail switch bolts",
+          "Reset the sail switch to align the sail switch flap pallet to the correct position",
+          "Bolt the sail switch bolts"
+        ]
       },
       "deadend/deadend"
     ],
     "question": "Is the problem solved?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/problem-solved",
       "label": "Yes"
     },
     "negative": {
-      "target": "deadend/deadend",
+      "target": "td/vacuum-alarm/check-sail-switch-terminal-cable",
       "label": "No"
     }
+  },
+  "td/vacuum-alarm/check-sail-switch-terminal-cable": {
+    "title": "Check Cable between Sail Switch and Electric Terminal",
+    "processes": [
+      {
+        "title": "Check the cable between the sail switch and the electric terminal",
+        "steps": [
+          "Turn off the power",
+          "Open the rear middle panel",
+          "Unplug the power plugs from the sail switch",
+          "Detach the vacuum sensor cables from the Electric Terminal",
+          "Check the contiunity between the terminals of the cable pairs by using a multimeter"
+        ]
+      }
+    ],
+    "question": "Is the cable functional?",
+    "positive": {
+      "target": "td/vacuum-alarm/check-terminal-control-panel-cable",
+      "label": "Yes"
+    },
+    "negative": {
+      "target": "td/vacuum-alarm/replace-sail-switch-terminal-cable",
+      "label": "No"
+    }
+  },
+  "td/vacuum-alarm/replace-sail-switch-terminal-cable": {
+    "title": "Replace Cable between Sail Switch and Electric Terminal",
+    "processes": [
+      {
+        "title": "Replace/Repair the cable between the sail switch and the electric terminal",
+        "steps": [
+          "Turn off the power",
+          "Remove the faulty cable",
+          "Replace it with a new cable",
+          "Plug in the cable plugs on its switch side terminals",
+          "Plug the terminal plugs onto the sail switch terminals",
+          "Insert the terminals on the electric terminal side into their sockets"
+        ]
+      },
+      "deadend/deadend"
+    ],
+    "question": "Is the problem solved?",
+    "positive": {
+      "target": "td/vacuum-alarm/problem-solved",
+      "label": "Yes"
+    },
+    "negative": {
+      "target": "td/vacuum-alarm/check-terminal-control-panel-cable",
+      "label": "No"
+    }
+  },
+  "td/vacuum-alarm/check-terminal-control-panel-cable": {
+    "title": "Check Cable between Electric Terminal and Control Panel",
+    "processes": [
+      {
+        "title": "Check the cable between the electric terminal and the control panel",
+        "steps": [
+          "Turn off the power",
+          "Detach the vacuum sensor cables from the Electric Terminal",
+          "Detach the vacuum sensor cables from the Control Panel",
+          "Check the continuity between the terminals of the cable pairs by using a multimeter"
+        ]
+      }
+    ],
+    "question": "Is the cable functional?",
+    "positive": {
+      "target": "td/vacuum-alarm/change-vacuum-di",
+      "label": "Yes"
+    },
+    "negative": {
+      "target": "td/vacuum-alarm/replace-terminal-control-panel-cable",
+      "label": "No"
+    }
+  },
+  "td/vacuum-alarm/replace-terminal-control-panel-cable": {
+    "title": "Replace Cable between Electric Terminal and Control Panel",
+    "processes": [
+      {
+        "title": "Replace/Repair the cable between the electric terminal and the control panel",
+        "steps": [
+          "Turn off the power",
+          "Remove the faulty cable",
+          "Replace it with a new cable",
+          "Attach the vacuum sensor cables to the Electric Terminal",
+          "Attach the vacuum sensor cables to the Control Panel"
+        ]
+      },
+      "deadend/deadend"
+    ],
+    "question": "Is the problem solved?",
+    "positive": {
+      "target": "td/vacuum-alarm/problem-solved",
+      "label": "Yes"
+    },
+    "negative": {
+      "target": "td/vacuum-alarm/change-vacuum-di",
+      "label": "No"
+    }
+  },
+  "td/vacuum-alarm/change-vacuum-di": {
+    "title": "Change Vacuum Sensor DI Assignment",
+    "processes": [
+      {
+        "title": "Change the DI assignment for the Vacuum Sensor",
+        "steps": [
+          "Shut off electricity to the dryer by pressing the \"Emergency Stop\" button",
+          "Press and hold the \"Menu\" button",
+          "Release the \"Emergency Stop\" button to power on the dryer",
+          "Enter the password by pressing the up-down direction buttons to change the numbers in each digit and press the stop-start (left-right direction) buttons to change the digits",
+          "Complete the password entry by pressing the \"OK\" button",
+          "Select the Digital Input (DI) menu by pressing the up-down direction buttons",
+          "Press the \"OK\" button to enter the DI menu",
+          "Select DI4 by pressing the up-down direction buttons",
+          "Press the \"OK\" button to set the DI4 value",
+          "Press the up-down direction buttons to select an available input",
+          "Press the \"OK\" button to save the changes"
+        ]
+      }
+    ],
+    "question": "Is the problem solved?",
+    "positive": {
+      "target": "td/vacuum-alarm/problem-solved",
+      "label": "Yes"
+    },
+    "negative": {
+      "target": "td/vacuum-alarm/send-cp-to-service",
+      "label": "No"
+    }
+  },
+  "td/vacuum-alarm/problem-solved": {
+    "title": "Problem is solved",
+    "final": true,
+    "question": "Thanks",
+    "processes": []
+  },
+  "td/vacuum-alarm/send-cp-to-service": {
+    "title": "Send the CP to the service",
+    "final": true,
+    "question": "Thanks",
+    "processes": []
   },
   "we110/alarm/alarm-code": {
     "title": "Alarm code",
@@ -803,25 +1036,11 @@
     ],
     "question": "Does ±24V DC exist on the DO?",
     "positive": {
-      "target": "deadend/deadend",
+      "target": "we110/steam/heater-fail/run-a-program",
       "label": "Yes"
     },
     "negative": {
       "target": "we110/steam/heater-fail/steam-heating-do-available",
-      "label": "No"
-    }
-  },
-  "we110/steam/heater-fail/run-a-program": {
-    "title": "Run A Program",
-    "processes": [
-      "deadend/deadend"
-    ],
-    "positive": {
-      "target": "we110/steam/heater-fail/problem-solved",
-      "label": "Yes"
-    },
-    "negative": {
-      "target": "we110/steam/heater-fail/check-cable-steam-valve-cp",
       "label": "No"
     }
   },
@@ -932,7 +1151,15 @@
           "57.00": "Screw the coil socket onto the coil via its holder screw by using a screwdriver"
         }
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "we110/steam/heater-fail/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -978,7 +1205,15 @@
           "25.00": "Plug the new hose into the steam valve and get the hose clipsed and plug the other end of the hose into the steam control valve"
         }
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "we110/steam/heater-fail/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -1029,7 +1264,15 @@
           "124.00": "Check the movement of the indicator rod on the steam piston valve visually"
         }
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "we110/steam/heater-fail/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -1053,6 +1296,28 @@
     "question": "Send control panel to service",
     "description": "The control panel needs to be serviced in the factory. Please contact\nTolon at service@tolon.com for instructions.",
     "processes": []
+  },
+  "we110/steam/heater-fail/run-a-program": {
+    "title": "Run A Program",
+    "processes": [
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ]
+      }
+    ],
+    "question": "Is the problem solved?",
+    "positive": {
+      "target": "we110/steam/heater-fail/problem-solved",
+      "label": "Yes"
+    },
+    "negative": {
+      "target": "we110/steam/heater-fail/check-cable-steam-valve-cp",
+      "label": "No"
+    }
   },
   "we60/emergency-stop-alarm/check-alarm": {
     "title": "Check alarm",
