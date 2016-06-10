@@ -170,3 +170,26 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-sail-switch-flap-pallet'
+
+    'check-sail-switch-flap-pallet'
+        title: "Check Sail Switch Flap Pallet"
+        processes: [
+            title: "Check the sail switch flap pallet"
+        ]
+        question: "Is it set correctly?"
+        positive:
+            target: 'check-sail-switch-terminal-cable'
+        negative:
+            target: 'reset-sail-switch-flap'
+
+    'reset-sail-switch-flap'
+        title: "Reset Sail Switch Flap"
+        processes: [
+            title: "Reset the sail switch flap"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-sail-switch-terminal-cable'
