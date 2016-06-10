@@ -100,7 +100,9 @@ mesh_uri = (context, local) ->
     return local if local.match /^\$\w+/ # do not expand $variables
     context_fragments = context.split '/'
     local_fragments = local.split '/'
-    [context_fragments[0...-local_fragments.length]..., local_fragments...].join '/'
+    uri = [context_fragments[0...-local_fragments.length]..., local_fragments...].join '/'
+    return 'deadend/deadend' unless data.cards[uri]?
+    uri
 
 identify_videos = (uri, card) ->
     return unless card.processes?

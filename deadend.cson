@@ -1,0 +1,5 @@
+cards:
+    'deadend':
+        question: "Loading…"
+        class: "deadend"
+        final: true
