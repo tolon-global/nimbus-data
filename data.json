@@ -1122,9 +1122,9 @@
         "title": "Open the left front panel",
         "steps": {
           "0": "Check the screen for the alert box",
-          "00:01.12": "Unscrew the two fixing screws on the left edge",
+          "00:00.00": "You will need the door latch key",
           "00:03.00": "Release the latch",
-          "00:04.20": "Swing the panel left"
+          "00:08.00": "Swing the panel left"
         },
         "source": "we60/general/left-panel-open",
         "video": "ht_9009",
@@ -1223,9 +1223,9 @@
         "title": "Open the left front panel",
         "video": "ht_9009",
         "steps": {
-          "1.12": "Unscrew the two fixing screws on the left edge",
+          "0.00": "You will need the door latch key",
           "3.00": "Release the latch",
-          "4.20": "Swing the panel left"
+          "8.00": "Swing the panel left"
         },
         "tags": {
           "done": {
@@ -1270,9 +1270,9 @@
         "title": "Open the left front panel",
         "steps": {
           "0": "Check the screen for the alert box",
-          "1.12": "Unscrew the two fixing screws on the left edge",
+          "0.00": "You will need the door latch key",
           "3.00": "Release the latch",
-          "4.20": "Swing the panel left"
+          "8.00": "Swing the panel left"
         },
         "source": "we60/general/left-panel-open",
         "video": "ht_9009",

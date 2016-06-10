@@ -3,9 +3,9 @@ processes: # naked process description (outside a flow/reusable)
         title: 'Open the left front panel'
         video: 'ht_9009' # refer to a video filename. Resolves to "video/ht_9009.en.mp4"
         steps:
-            '00:01.12': "Unscrew the two fixing screws on the left edge"
+            '00:00.00': "You will need the door latch key"
             '00:03.00': "Release the latch"
-            '00:04.20': "Swing the panel left"
+            '00:08.00': "Swing the panel left"
             # optional time code notation for video subtitling and jumping. 'mm:ss.ff'
         tags:
             done: # set these tags if the process is complete without problems
