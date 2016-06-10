@@ -216,3 +216,26 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-terminal-control-panel-cable'
+
+    'check-terminal-control-panel-cable'
+        title: "Check Cable between Electric Terminal and Control Panel"
+        processes: [
+            title: "Check the cable between the electric terminal and the control panel"
+        ]
+        question: "Is the cable functional?"
+        positive:
+            target: 'change-vacuum-di'
+        negative:
+            target: 'replace-terminal-control-panel-cable'
+
+    'replace-terminal-control-panel-cable'
+        title: "Replace Cable between Electric Terminal and Control Panel"
+        processes: [
+            title: "Replace/Repair the cable between the electric terminal and the control panel"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'change-vacuum-di'
