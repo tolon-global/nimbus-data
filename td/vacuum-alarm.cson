@@ -75,6 +75,9 @@ cards:
         title: "Check closing of Lint Filter Door"
         processes: [
             title: "Check the closing of the lint filter door"
+            steps: [
+                'Check if the lint filter door is air tight'
+            ]
         ]
         question: "Is it closing?"
         positive:
@@ -86,6 +89,9 @@ cards:
         title: "Fix closing of Loading Door Problem"
         processes: [
             title: "Fix the closing problem of the loading door"
+            steps: [
+                'Fix the air gap of the loading door'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
