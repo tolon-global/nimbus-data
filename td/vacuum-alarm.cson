@@ -124,3 +124,26 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-exhaust-outlet'
+
+    'check-exhaust-outlet'
+        title: "Check Exhaust Outlet"
+        processes: [
+            title: "Check the exhaust outlet"
+        ]
+        question: "Is the exhaust blocked?"
+        positive:
+            target: 'clean-exhaust'
+        negative:
+            target: 'check-sail-switch-flap'
+
+    'clean-exhaust'
+        title: "Clean/Clear Exhaust"
+        processes: [
+            title: "Clean/Clear the exhaust"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-sail-switch-flap'
