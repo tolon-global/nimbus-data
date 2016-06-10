@@ -24,8 +24,19 @@ cards:
             Press the menu button and select "alarms". You can scroll through the
             logged alarms.
         '''
+        positive:
+            title: "That's it"
+            target: '$option'
+        negative:
+            title: "Something else"
+            target: "non-alarm-problem"
 
     'no-alarm':
         title: "No alarm"
         question: "That's good then :)"
+        final: true
+
+    'non-alarm-problem':
+        title: "Problem"
+        question: "Coming soon"
         final: true

@@ -304,11 +304,26 @@
         }
       }
     ],
-    "description": "Press the menu button and select \"alarms\". You can scroll through the\nlogged alarms."
+    "description": "Press the menu button and select \"alarms\". You can scroll through the\nlogged alarms.",
+    "positive": {
+      "title": "That's it",
+      "target": "td/alarm/$option",
+      "label": "Yes"
+    },
+    "negative": {
+      "title": "Something else",
+      "target": "td/alarm/non-alarm-problem",
+      "label": "No"
+    }
   },
   "td/alarm/no-alarm": {
     "title": "No alarm",
     "question": "That's good then :)",
+    "final": true
+  },
+  "td/alarm/non-alarm-problem": {
+    "title": "Problem",
+    "question": "Coming soon",
     "final": true
   },
   "td/vacuum-alarm/check-vacuum-parameters": {
