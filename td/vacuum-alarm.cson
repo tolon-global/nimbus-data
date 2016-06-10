@@ -43,6 +43,13 @@ cards:
         title: "Check Operation of Sail Switch"
         processes: [
             title: "Check the operation of the sail switch"
+            steps: [
+                'Open the electic cabinet door'
+                'Enter the Diagnostics menu'
+                'Select DI4 (Vacuum DI)'
+                'Press the sail switch flap'
+                'Check if the DI4 value is changing when you press and release the flap'
+            ]
         ]
         question: "Is it operating?"
         positive:
@@ -54,6 +61,9 @@ cards:
         title: "Check closing of Loading Door"
         processes: [
             title: "Check the closing of the loading door"
+            steps: [
+                'Check if the loading door is air tight'
+            ]
         ]
         question: "Is it closing?"
         positive:
