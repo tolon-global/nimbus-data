@@ -31,7 +31,7 @@ cards:
                 'Press the "Cancel" button in the parameter menu and answer the question "Save ?" with "Y" (Yes) to save the changes.'
                 'If another vacuum parameter has been changed, too, repeat the steps 1 to 6 for the related parameter.'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -92,7 +92,7 @@ cards:
             steps: [
                 'Fix the air gap of the loading door'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -107,7 +107,7 @@ cards:
             steps: [
                 'Close the lint filter door to make the machine air tight'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -136,7 +136,7 @@ cards:
             steps: [
                 'Clean the lint filter by using a brush'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -175,7 +175,7 @@ cards:
                 'Turn on the power'
                 'Check if the fan motor is rotating in the correct direction'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -208,7 +208,7 @@ cards:
                 'Clean the exhaust'
                 'Bolt the exhaust pipeline back to the machine'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -246,7 +246,7 @@ cards:
                 'Close the rear middle panel'
                 'Turn on the power'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -279,7 +279,7 @@ cards:
                 'Reset the sail switch to align the sail switch flap pallet to the correct position'
                 'Bolt the sail switch bolts'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -317,7 +317,7 @@ cards:
                 'Plug the terminal plugs onto the sail switch terminals'
                 'Insert the terminals on the electric terminal side into their sockets'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -353,7 +353,7 @@ cards:
                 'Attach the vacuum sensor cables to the Electric Terminal'
                 'Attach the vacuum sensor cables to the Control Panel'
             ]
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -394,3 +394,12 @@ cards:
         title: "Send the CP to the service"
         final: true
         question: "Thanks"
+
+processes:
+    'run-a-program':
+        title: "Run a program to monitor the problem"
+        steps: [
+            'Select any program on the main screen'
+            'Press the "OK" button to enter the program screen'
+            'Press the "Start" button to start the program'
+        ]
