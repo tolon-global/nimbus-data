@@ -172,6 +172,10 @@
       {
         "title": "TWE110",
         "target": "we110/alarm/alarm-code"
+      },
+      {
+        "title": "TD series",
+        "target": "td/alarm/alarm-code"
       }
     ],
     "description": "Choose the model of your machine from the list provided.\nThe machine identifier can be seen behind the machine on\nthe top right corner of the nameplate.",
@@ -189,6 +193,123 @@
     "question": "Please call +90-232-363-0000 for help",
     "call": "+90-232-363-0000",
     "description": "We are sorry that we couldn't find a solution immediately. Our staff\nis always happy to help and solve your problem. Just give us a call."
+  },
+  "td/alarm/alarm-code": {
+    "title": "Alarm code",
+    "question": "What is the alarm code on the screen?",
+    "options": [
+      {
+        "title": "NO ALRM",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "VACUUM",
+        "target": "td/vacuum-alarm/check-vacuum-parameters",
+        "tag": {
+          "alarm": "vacuum-alarm"
+        }
+      },
+      {
+        "title": "HEATER",
+        "target": "td/alarm/heater-fail",
+        "tag": {
+          "alarm": "heater-fail"
+        }
+      },
+      {
+        "title": "MEM READ",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "MEM WRITE",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "SOFTWARE",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "HIGH TEMP",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "TEMP SNSR",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "HUMDT SNSR",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "AC DRIVE",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "DOOR OPEN",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "NO TILT",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "NO SEAT",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "FLTR DOOR",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      },
+      {
+        "title": "DRUM SPD",
+        "target": "td/alarm/no-alarm",
+        "tag": {
+          "alarm": "no-alarm"
+        }
+      }
+    ],
+    "description": "Press the menu button and select \"alarms\". You can scroll through the\nlogged alarms."
+  },
+  "td/alarm/no-alarm": {
+    "title": "No alarm",
+    "question": "That's good then :)",
+    "final": true
   },
   "td/vacuum-alarm/check-vacuum-parameters": {
     "title": "Check Vacuum Parameters",

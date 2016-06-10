@@ -1,0 +1,31 @@
+cards:
+    'alarm-code':
+        title: "Alarm code"
+        question: "What is the alarm code on the screen?"
+        options: [
+            { title: "NO ALRM", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "VACUUM", target: 'vacuum-alarm/check-vacuum-parameters', tag: { alarm: "vacuum-alarm" }}
+            { title: "HEATER", target: 'heater-fail', tag: { alarm: "heater-fail" }}
+            { title: "MEM READ", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "MEM WRITE", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "SOFTWARE", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "HIGH TEMP", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "TEMP SNSR", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "HUMDT SNSR", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "AC DRIVE", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "DOOR OPEN", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "NO TILT", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "NO SEAT", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "FLTR DOOR", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+            { title: "DRUM SPD", target: 'no-alarm', tag: { alarm: "no-alarm" }}
+        ]
+
+        description: '''
+            Press the menu button and select "alarms". You can scroll through the
+            logged alarms.
+        '''
+
+    'no-alarm':
+        title: "No alarm"
+        question: "That's good then :)"
+        final: true

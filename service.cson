@@ -31,6 +31,7 @@ cards:
             { title: "TWE20 or TWE40", target: 'we-m/alarm/alarm-code' }
             { title: "TWE60", target: 'we60/alarm/alarm-code' }
             { title: "TWE110", target: 'we110/alarm/alarm-code' }
+            { title: "TD series", target: 'td/alarm/alarm-code'}
         ]
         description: '''
             Choose the model of your machine from the list provided.
