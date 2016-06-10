@@ -193,3 +193,26 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-sail-switch-terminal-cable'
+
+    'check-sail-switch-terminal-cable'
+        title: "Check Cable between Sail Switch and Electric Terminal"
+        processes: [
+            title: "Check the cable between the sail switch and the electric terminal"
+        ]
+        question: "Is the cable functional?"
+        positive:
+            target: 'check-terminal-control-panel-cable'
+        negative:
+            target: 'replace-sail-switch-terminal-cable'
+
+    'replace-sail-switch-terminal-cable'
+        title: "Replace Cable between Sail Switch and Electric Terminal"
+        processes: [
+            title: "Replace/Repair the cable between the sail switch and the electric terminal"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-terminal-control-panel-cable'
