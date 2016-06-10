@@ -281,6 +281,13 @@ cards:
         title: "Check Cable between Sail Switch and Electric Terminal"
         processes: [
             title: "Check the cable between the sail switch and the electric terminal"
+            steps: [
+                'Turn off the power'
+                'Open the rear middle panel'
+                'Unplug the power plugs from the sail switch'
+                'Detach the vacuum sensor cables from the Electric Terminal'
+                'Check the contiunity between the terminals of the cable pairs by using a multimeter'
+            ]
         ]
         question: "Is the cable functional?"
         positive:
@@ -292,6 +299,14 @@ cards:
         title: "Replace Cable between Sail Switch and Electric Terminal"
         processes: [
             title: "Replace/Repair the cable between the sail switch and the electric terminal"
+            steps: [
+                'Turn off the power'
+                'Remove the faulty cable'
+                'Replace it with a new cable'
+                'Plug in the cable plugs on its switch side terminals'
+                'Plug the terminal plugs onto the sail switch terminals'
+                'Insert the terminals on the electric terminal side into their sockets'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
