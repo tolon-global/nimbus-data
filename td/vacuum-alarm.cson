@@ -365,6 +365,19 @@ cards:
         title: "Change Vacuum Sensor DI Assignment"
         processes: [
             title: "Change the DI assignment for the Vacuum Sensor"
+            steps: [
+                'Shut off electricity to the dryer by pressing the "Emergency Stop" button'
+                'Press and hold the "Menu" button'
+                'Release the "Emergency Stop" button to power on the dryer'
+                'Enter the password by pressing the up-down direction buttons to change the numbers in each digit and press the stop-start (left-right direction) buttons to change the digits'
+                'Complete the password entry by pressing the "OK" button'
+                'Select the Digital Input (DI) menu by pressing the up-down direction buttons'
+                'Press the "OK" button to enter the DI menu'
+                'Select DI4 by pressing the up-down direction buttons'
+                'Press the "OK" button to set the DI4 value'
+                'Press the up-down direction buttons to select an available input'
+                'Press the "OK" button to save the changes'
+            ]
         ]
         question: "Is the problem solved?"
         positive:
