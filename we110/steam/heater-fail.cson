@@ -60,19 +60,9 @@ cards:
         ]
         question: "Does ±24V DC exist on the DO?"
         positive:
-            target: 'general/run-a-program'
+            target: 'run-a-program'
         negative:
             target: 'steam-heating-do-available'
-
-    'run-a-program':
-        title: "Run A Program"
-        processes: [
-            "general/run-a-program"
-        ]
-        positive:
-            target: 'problem-solved'
-        negative:
-            target: 'check-cable-steam-valve-cp'
 
     'check-cable-steam-valve-cp':
         title: "Check Cable Steam Valve CP"
@@ -153,7 +143,7 @@ cards:
                 '00:39.00': 'Bolt the plastic nut which fastens the coil onto the armature whilst pushing the coil upwards'
                 '00:52.00': 'Attach the steam valve coil socket onto the new coil'
                 '00:57.00': 'Screw the coil socket onto the coil via its holder screw by using a screwdriver'
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -189,7 +179,7 @@ cards:
                 '00:05.00': 'Follow the cable route and free the cable from its clips'
                 '00:20.00': 'Unplug the other end of the hose from the steam valve'
                 '00:25.00': 'Plug the new hose into the steam valve and get the hose clipsed and plug the other end of the hose into the steam control valve'
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -229,7 +219,7 @@ cards:
                 '01:58.00': 'Press the "OK" button to activate the "Steam Valve" DO'
                 '02:00.00': 'Press the "OK" button to deactivate the "Steam Valve" DO'
                 '02:04.00': 'Check the movement of the indicator rod on the steam piston valve visually'
-            "general/run-a-program"
+            "run-a-program"
         ]
         question: "Is the problem solved?"
         positive:
@@ -246,3 +236,28 @@ cards:
         title: "Send the CP to the service"
         final: True
         question: "Thanks"
+
+    'run-a-program':
+        title: "Run A Program"
+        processes: [
+            title: "Run a program to monitor the problem"
+            steps: [
+                'Select any program on the main screen'
+                'Press the "OK" button to enter the program screen'
+                'Press the "Start" button to start the program'
+            ]
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-cable-steam-valve-cp'
+
+processes:
+    'run-a-program':
+        title: "Run a program to monitor the problem"
+        steps: [
+            'Select any program on the main screen'
+            'Press the "OK" button to enter the program screen'
+            'Press the "Start" button to start the program'
+        ]
