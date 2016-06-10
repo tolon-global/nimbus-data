@@ -55,14 +55,14 @@ expand_links = (uri, card) ->
             when 'string'
                 card[answer] =
                     label: defaults[answer]
-                    target: mesh_uri uri, card[answer]
+                    target: check_uri mesh_uri uri, card[answer]
             when 'object'
                 card[answer].label ?= defaults[answer]
                 break unless card[answer].target
-                card[answer].target = mesh_uri uri, card[answer].target
+                card[answer].target = check_uri mesh_uri uri, card[answer].target
     if card.options?
         for option in card.options
-            option.target = mesh_uri uri, option.target
+            option.target = check_uri mesh_uri uri, option.target
 
 embed_processes = (uri, card) ->
     return unless card.processes?
@@ -100,7 +100,10 @@ mesh_uri = (context, local) ->
     return local if local.match /^\$\w+/ # do not expand $variables
     context_fragments = context.split '/'
     local_fragments = local.split '/'
-    uri = [context_fragments[0...-local_fragments.length]..., local_fragments...].join '/'
+    [context_fragments[0...-local_fragments.length]..., local_fragments...].join '/'
+
+check_uri = (uri) ->
+    return uri if uri.match /^\$\w+/
     return 'deadend/deadend' unless data.cards[uri]?
     uri
 
