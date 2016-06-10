@@ -35,6 +35,9 @@
     },
     "ht_0033": {
       "subtitles": "WEBVTT Nimbus Service Procedure ht_0033\n\n00:00.000 --> 00:10.000\n- Unplug the air hose from its fitting on the steam piston valve\n\n00:10.000 --> 00:42.000\n- Detach the steam piston valve from the connection pipe by unbolting it using a pipe wrench\n\n00:42.000 --> 01:44.000\n- Attach the new steam piston valve onto the connection pipe by bolting it using a pipe wrench. Tighten the valve whilst bolting it\n\n01:44.000 --> 01:54.000\n- Plug the air hose into the fitting on the steam piston valve\n\n01:54.000 --> 01:58.000\n- Select the \"Steam Valve\" DO on the \"Digital Outputs\" frame\n\n01:58.000 --> 02:00.000\n- Press the \"OK\" button to activate the \"Steam Valve\" DO\n\n02:00.000 --> 02:04.000\n- Press the \"OK\" button to deactivate the \"Steam Valve\" DO\n\n02:04.000 --> 59:59.000\n- Check the movement of the indicator rod on the steam piston valve visually\n\n"
+    },
+    "ht_9009": {
+      "subtitles": "WEBVTT Nimbus Service Procedure ht_9009\n\n00:00.000 --> 00:03.000\n- You will need the door latch key\n\n00:03.000 --> 00:08.000\n- Release the latch\n\n00:08.000 --> 59:59.000\n- Swing the panel left\n\n"
     }
   }
 }

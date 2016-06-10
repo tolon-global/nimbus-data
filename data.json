@@ -389,7 +389,15 @@
           "If another vacuum parameter has been changed, too, repeat the steps 1 to 6 for the related parameter."
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -474,7 +482,15 @@
           "Fix the air gap of the loading door"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -495,7 +511,15 @@
           "Close the lint filter door to make the machine air tight"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -536,7 +560,15 @@
           "Clean the lint filter by using a brush"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -587,7 +619,15 @@
           "Check if the fan motor is rotating in the correct direction"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -632,7 +672,15 @@
           "Bolt the exhaust pipeline back to the machine"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -682,7 +730,15 @@
           "Turn on the power"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -727,7 +783,15 @@
           "Bolt the sail switch bolts"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -777,7 +841,15 @@
           "Insert the terminals on the electric terminal side into their sockets"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -825,7 +897,15 @@
           "Attach the vacuum sensor cables to the Control Panel"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Run a program to monitor the problem",
+        "steps": [
+          "Select any program on the main screen",
+          "Press the \"OK\" button to enter the program screen",
+          "Press the \"Start\" button to start the program"
+        ],
+        "source": "td/vacuum-alarm/run-a-program"
+      }
     ],
     "question": "Is the problem solved?",
     "positive": {
@@ -1322,7 +1402,13 @@
   "we60/emergency-stop-alarm/check-alarm": {
     "title": "Check alarm",
     "processes": [
-      "deadend/deadend"
+      {
+        "title": "Check the 'Emergency Stop' alarm status",
+        "steps": [
+          "Check the screen for the alert box"
+        ],
+        "source": "we60/emergency-stop-alarm/check-emergency-stop-alarm"
+      }
     ],
     "question": "Has the alarm message been removed?",
     "positive": {
@@ -1337,7 +1423,13 @@
   "we60/emergency-stop-alarm/button-pressed": {
     "title": "Check button pressed state",
     "processes": [
-      "deadend/deadend"
+      {
+        "title": "Check the Emergency Stop Button mechanically",
+        "steps": [
+          "Press the ESB to check if the button can be pressed"
+        ],
+        "source": "we60/emergency-stop-alarm/check-esb-mechanically"
+      }
     ],
     "question": "Is the button in the pressed state?",
     "positive": {
@@ -1373,7 +1465,13 @@
   "we60/emergency-stop-alarm/release-esb-check-alarm": {
     "title": "Check alarm",
     "processes": [
-      "deadend/deadend"
+      {
+        "title": "Check the 'Emergency Stop' alarm status",
+        "steps": [
+          "Check the screen for the alert box"
+        ],
+        "source": "we60/emergency-stop-alarm/check-emergency-stop-alarm"
+      }
     ],
     "question": "Has the alarm message been removed?",
     "positive": {
@@ -1389,7 +1487,31 @@
   "we60/emergency-stop-alarm/replace-esb": {
     "title": "Replace ESB",
     "processes": [
-      "deadend/deadend",
+      {
+        "title": "Open the left front panel",
+        "steps": {
+          "0": "Check the screen for the alert box",
+          "00:00.00": "You will need the door latch key",
+          "00:03.00": "Release the latch",
+          "00:08.00": "Swing the panel left"
+        },
+        "source": "we60/general/left-panel-open",
+        "video": "ht_9009",
+        "tags": {
+          "done": {
+            "left-panel": "open"
+          },
+          "escape": {
+            "left-panel": "open"
+          },
+          "skip": {
+            "left-panel": "open"
+          }
+        },
+        "tools": [
+          "n1-philips-screwdriver"
+        ]
+      },
       {
         "title": "Replace the ESB",
         "steps": [
@@ -1409,8 +1531,33 @@
           "Eaton 22mm Emergency Stop button"
         ]
       },
-      "deadend/deadend",
-      "deadend/deadend"
+      {
+        "title": "Close the left front panel",
+        "steps": [
+          "Close the panel",
+          "Fix the latch",
+          "Screw back the two fixing screws on the left edge"
+        ],
+        "tags": {
+          "done": {
+            "left-panel": null
+          },
+          "only": {
+            "left-panel": "open"
+          }
+        },
+        "tools": [
+          "#1 Philips screwdriver"
+        ],
+        "source": "we60/general/left-panel-close"
+      },
+      {
+        "title": "Check the 'Emergency Stop' alarm status",
+        "steps": [
+          "Check the screen for the alert box"
+        ],
+        "source": "we60/emergency-stop-alarm/check-emergency-stop-alarm"
+      }
     ],
     "question": "Has the alarm message been removed?",
     "positive": {
@@ -1426,8 +1573,45 @@
   "we60/emergency-stop-alarm/check-contact": {
     "title": "Check ESB contact",
     "processes": [
-      "deadend/deadend",
-      "deadend/deadend",
+      {
+        "title": "Turn the power off",
+        "steps": [
+          "Twist the power switch 90° anti-clockwise ⤿"
+        ],
+        "tags": {
+          "skip": {
+            "power": false
+          },
+          "done": {
+            "power": false
+          }
+        },
+        "source": "we60/general/power-off"
+      },
+      {
+        "title": "Open the left front panel",
+        "video": "ht_9009",
+        "steps": {
+          "0.00": "You will need the door latch key",
+          "3.00": "Release the latch",
+          "8.00": "Swing the panel left"
+        },
+        "tags": {
+          "done": {
+            "left-panel": "open"
+          },
+          "escape": {
+            "left-panel": "open"
+          },
+          "skip": {
+            "left-panel": "open"
+          }
+        },
+        "tools": [
+          "#1 Philips screwdriver"
+        ],
+        "source": "we60/general/left-panel-open"
+      },
       {
         "title": "Check the contacts on the ESB",
         "steps": [
@@ -1451,7 +1635,31 @@
   "we60/emergency-stop-alarm/replace-esb-contact": {
     "title": "Replace ESB contact",
     "processes": [
-      "deadend/deadend",
+      {
+        "title": "Open the left front panel",
+        "steps": {
+          "0": "Check the screen for the alert box",
+          "0.00": "You will need the door latch key",
+          "3.00": "Release the latch",
+          "8.00": "Swing the panel left"
+        },
+        "source": "we60/general/left-panel-open",
+        "video": "ht_9009",
+        "tags": {
+          "done": {
+            "left-panel": "open"
+          },
+          "escape": {
+            "left-panel": "open"
+          },
+          "skip": {
+            "left-panel": "open"
+          }
+        },
+        "tools": [
+          "#1 Philips screwdriver"
+        ]
+      },
       {
         "title": "Replace the contact on the ESB",
         "steps": [
@@ -1467,7 +1675,13 @@
           "Eaton 22mm Emergency Stop contact block"
         ]
       },
-      "deadend/deadend"
+      {
+        "title": "Check the 'Emergency Stop' alarm status",
+        "steps": [
+          "Check the screen for the alert box"
+        ],
+        "source": "we60/emergency-stop-alarm/check-emergency-stop-alarm"
+      }
     ],
     "question": "Has the alarm message been removed?",
     "positive": {
