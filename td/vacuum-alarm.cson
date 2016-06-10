@@ -104,6 +104,9 @@ cards:
         title: "Close Lint Filter Door"
         processes: [
             title: "Close the lint filter door correctly"
+            steps: [
+                'Close the lint filter door to make the machine air tight'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -116,6 +119,9 @@ cards:
         title: "Check Dust on Lint Filter"
         processes: [
             title: "Check the dustiness of the lint filter"
+            steps: [
+                'Check if the lint filter is dusty'
+            ]
         ]
         question: "Is the filter dusty?"
         positive:
