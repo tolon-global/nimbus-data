@@ -101,3 +101,26 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-fan-motor-rotation'
+
+    'check-fan-motor-rotation'
+        title: "Check Fan Motor Rotation Direction"
+        processes: [
+            title: "Check the rotation direction of the fan motor"
+        ]
+        question: "Is it rotating CW?"
+        positive:
+            target: 'check-exhaust-outlet'
+        negative:
+            target: 'fix-fan-motor-rotation'
+
+    'fix-fan-motor-rotation'
+        title: "Fix Fan Motor Rotation Direction"
+        processes: [
+            title: "Fix the rotation direction of the fan motor"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-exhaust-outlet'
