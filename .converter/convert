@@ -13,7 +13,7 @@ data =
     tools: {}
     parts: {}
     assets:
-        videos: []
+        videos: {}
 
 g = glob "**/*.cson", (e,f) ->
     sources = f
@@ -40,7 +40,7 @@ g = glob "**/*.cson", (e,f) ->
         secondify_timecodes uri, card
         console.log uri
 
-    data.assets.videos = unique data.assets.videos
+    #data.assets.videos = unique data.assets.videos
 
     fs.writeFile "data.json", EJSON.stringify data.cards, {indent: true}
     console.log "#{Object.keys(data.cards).length} cards written"
@@ -104,7 +104,18 @@ mesh_uri = (context, local) ->
 identify_videos = (uri, card) ->
     return unless card.processes?
     for proc in card.processes
-        data.assets.videos.push proc.video if proc.video?
+        if proc.video? and not data.assets.videos[proc.video]?
+            data.assets.videos[proc.video] = { subtitles: create_subtitles proc }
+
+create_subtitles = (proc) ->
+        subs = "WEBVTT Nimbus Service Procedure #{proc.video}\n\n"
+        times = Object.keys(proc.steps)
+        endtime = "59:59.00"
+        cues = ("#{t}0 --> #{times[i+1]||endtime}0\n- #{proc.steps[t]}\n\n" for t, i in times)
+        subs += cues.join ''
+        fs.writeFileSync "subtitles/#{proc.video}.vtt", subs
+        subs
+
 
 secondify_timecodes = (uri, card) ->
     return unless card.processes?
