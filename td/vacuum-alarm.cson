@@ -239,3 +239,24 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'change-vacuum-di'
+
+    'change-vacuum-di'
+        title: "Change Vacuum Sensor DI Assignment"
+        processes: [
+            title: "Change the DI assignment for the Vacuum Sensor"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'send-cp-to-service'
+
+    'problem-solved':
+        title: "Problem is solved"
+        final: true
+        question: "Thanks"
+
+    'send-cp-to-service':
+        title: "Send the CP to the service"
+        final: true
+        question: "Thanks"
