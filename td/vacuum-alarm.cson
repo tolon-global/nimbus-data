@@ -147,3 +147,26 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-sail-switch-flap'
+
+    'check-sail-switch-flap'
+        title: "Check Sail Switch Flap"
+        processes: [
+            title: "Check the flap of the sail switch"
+        ]
+        question: "Is the flap functioning?"
+        positive:
+            target: 'check-sail-switch-flap-pallet'
+        negative:
+            target: 'replace-sail-switch-flap'
+
+    'replace-sail-switch-flap'
+        title: "Replace Sail Switch Flap"
+        processes: [
+            title: "Replace the sail switch flap"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-sail-switch-flap-pallet'
