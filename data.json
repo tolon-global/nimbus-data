@@ -1034,7 +1034,7 @@
     "description": "Is there a steam valve going in?",
     "positive": {
       "label": "Yes, steam",
-      "target": "deadend/deadend",
+      "target": "we110/steam/heater-fail/check-steam-pressure",
       "autoselect": {
         "heating": "steam"
       },
@@ -1053,6 +1053,27 @@
       }
     },
     "processes": []
+  },
+  "we110/steam/heater-fail/check-steam-pressure": {
+    "title": "Check steam pressure",
+    "processes": [
+      {
+        "title": "Check the steam pressure",
+        "steps": [
+          "Check the steam gage on the steam valve",
+          "The gauge should read between 4-6 bar"
+        ]
+      }
+    ],
+    "question": "What is the steam pressure",
+    "positive": {
+      "label": "4-6 bar",
+      "target": "we110/steam/heater-fail/check-steam-heating-do"
+    },
+    "negative": {
+      "label": "< 4 bar",
+      "target": "we110/steam/heater-fail/check-steam-valve-coil"
+    }
   },
   "we110/steam/heater-fail/check-steam-heating-do": {
     "title": "Check Steam Heating DO",

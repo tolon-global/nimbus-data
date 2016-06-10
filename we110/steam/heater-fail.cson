@@ -1,4 +1,22 @@
 cards:
+    'check-steam-pressure':
+        title: "Check steam pressure"
+        processes: [
+            title: "Check the steam pressure"
+            steps: [
+                "Check the steam gage on the steam valve"
+                "The gauge should read between 4-6 bar"
+            ]
+        ]
+        question: "What is the steam pressure"
+        positive:
+            label: "4-6 bar"
+            target: 'check-steam-heating-do'
+        negative:
+            label: "< 4 bar"
+            target: 'check-steam-valve-coil'
+
+
     'check-steam-heating-do':
         title: "Check Steam Heating DO"
         processes: [
