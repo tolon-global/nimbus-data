@@ -15,14 +15,14 @@ cards:
         ]
         question: "Have they been modified?"
         positive:
-            target: 'revert-parameters-to-original'
+            target: 'revert-vacuum-parameters'
         negative:
             target: 'check-sail-switch'
 
-    'revert-parameters-to-original'
-        title: "Revert parameters back to original settings"
+    'revert-vacuum-parameters'
+        title: "Revert Vacuum Parameters Back to Original Settings"
         processes: [
-            title: "Revert the parameters back to their original settings"
+            title: "Revert the vacuum parameters back to their original settings"
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
