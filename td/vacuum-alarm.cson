@@ -204,6 +204,10 @@ cards:
         title: "Clean/Clear Exhaust"
         processes: [
             title: "Clean/Clear the exhaust"
+            steps: [
+                'Clean the exhaust'
+                'Bolt the exhaust pipeline back to the machine'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -216,6 +220,11 @@ cards:
         title: "Check Sail Switch Flap"
         processes: [
             title: "Check the flap of the sail switch"
+            steps: [
+                'Open the electic cabinet door'
+                'Start any program'
+                "Check the sail switch flap in the electric cabinet to see if it's being sucked by the vacuum and it sticks to the opening"
+            ]
         ]
         question: "Is the flap functioning?"
         positive:
