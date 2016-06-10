@@ -329,6 +329,12 @@ cards:
         title: "Check Cable between Electric Terminal and Control Panel"
         processes: [
             title: "Check the cable between the electric terminal and the control panel"
+            steps: [
+                'Turn off the power'
+                'Detach the vacuum sensor cables from the Electric Terminal'
+                'Detach the vacuum sensor cables from the Control Panel'
+                'Check the continuity between the terminals of the cable pairs by using a multimeter'
+            ]
         ]
         question: "Is the cable functional?"
         positive:
@@ -340,6 +346,13 @@ cards:
         title: "Replace Cable between Electric Terminal and Control Panel"
         processes: [
             title: "Replace/Repair the cable between the electric terminal and the control panel"
+            steps: [
+                'Turn off the power'
+                'Remove the faulty cable'
+                'Replace it with a new cable'
+                'Attach the vacuum sensor cables to the Electric Terminal'
+                'Attach the vacuum sensor cables to the Control Panel'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
