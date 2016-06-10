@@ -1,0 +1,6 @@
+{
+    "serial-number": "TWE2016060130",
+    "model": "TWE60",
+    "alarm": "Emergency stop alarm",
+    "start": "we60/emergency-stop-alarm/button-pressed"
+}

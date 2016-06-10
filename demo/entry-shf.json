@@ -1,0 +1,6 @@
+{
+    "serial-number": "TWE2016060133",
+    "model": "TWE110",
+    "alarm": "Heater failure",
+    "start": "we110/steam/heater-fail/check-steam-pressure"
+}

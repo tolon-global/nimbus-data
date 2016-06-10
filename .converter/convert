@@ -10,6 +10,10 @@ rawdata = {}
 data =
     cards: {}
     processes: {}
+    tools: {}
+    parts: {}
+    assets:
+        videos: {}
 
 g = glob "**/*.cson", (e,f) ->
     sources = f
@@ -24,13 +28,25 @@ g = glob "**/*.cson", (e,f) ->
         for innername, fragment of file.processes
             data.processes["#{filename}/#{innername}"] = fragment
 
+        data.tools = file.tools if filename is 'tools'
+        data.parts = file.parts if filename is 'parts'
+
     for uri, card of data.cards
         expand_links uri, card
         embed_processes uri, card
         apply_templates uri, card
+        expand_assets uri, card
+        identify_videos uri, card
+        secondify_timecodes uri, card
+        add_empty_processes_key uri, card
+        console.log uri
 
+    #data.assets.videos = unique data.assets.videos
 
-    fs.writeFile "data.json", EJSON.stringify data, {indent: true}
+    fs.writeFile "data.json", EJSON.stringify data.cards, {indent: true}
+    console.log "#{Object.keys(data.cards).length} cards written"
+    # fs.writeFile "data-debug.json", EJSON.stringify data, {indent: true}
+    fs.writeFile "assets.json", EJSON.stringify data.assets, {indent: true}
 
 expand_links = (uri, card) ->
     defaults = {positive: "Yes", negative: "No"}
@@ -63,14 +79,63 @@ apply_templates = (uri, card) ->
     if card.processes?
         for proc, i in card.processes
             if proc is "$template"
-                debugger
                 template_procs = data.cards[template_uri].processes
                 card.processes.splice i, 1, template_procs...
 
     merged_card = deepmerge data.cards[template_uri], card
     data.cards[uri] = merged_card
 
+expand_assets = (uri, card) ->
+    return unless card.processes?
+    for proc in card.processes
+        for asset_type in ['tools', 'parts']
+            continue unless proc[asset_type]?
+            proc[asset_type] = proc[asset_type].map (asset) ->
+                if asset.match /^(\w|[\/-])+$/
+                    data[asset_type][asset]
+                else
+                    asset
+
 mesh_uri = (context, local) ->
+    return local if local.match /^\$\w+/ # do not expand $variables
     context_fragments = context.split '/'
     local_fragments = local.split '/'
-    [context_fragments[0...-local_fragments.length]..., local_fragments...].join '/'
+    uri = [context_fragments[0...-local_fragments.length]..., local_fragments...].join '/'
+    return 'deadend/deadend' unless data.cards[uri]?
+    uri
+
+identify_videos = (uri, card) ->
+    return unless card.processes?
+    for proc in card.processes
+        if proc.video? and not data.assets.videos[proc.video]?
+            data.assets.videos[proc.video] = { subtitles: create_subtitles proc }
+
+create_subtitles = (proc) ->
+        subs = "WEBVTT Nimbus Service Procedure #{proc.video}\n\n"
+        times = Object.keys(proc.steps)
+        endtime = "59:59.00"
+        cues = ("#{t}0 --> #{times[i+1]||endtime}0\n- #{proc.steps[t]}\n\n" for t, i in times)
+        subs += cues.join ''
+        fs.writeFileSync "subtitles/#{proc.video}.vtt", subs
+        subs
+
+
+secondify_timecodes = (uri, card) ->
+    return unless card.processes?
+
+    for proc in card.processes
+        continue unless proc.steps? and proc.steps.constructor is Object
+        for timecode, subtitle of proc.steps when match = timecode.match /(\d\d):(\d\d)\.(\d\d)/
+            [minutes, seconds, miliseconds] = match[1..3].map(Number)
+            s = minutes*60 + seconds
+            ms = ("00" + miliseconds)[-2..]
+            proc.steps["#{s}.#{ms}"] = subtitle
+            delete proc.steps[timecode]
+
+unique = (array) ->
+    hash = {}
+    hash[e] = e for e in array
+    (key for key, value of hash)
+
+
+add_empty_processes_key = (uri, card) -> card.processes ?= []

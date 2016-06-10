@@ -228,14 +228,18 @@ cards:
             target: 'send-cp-to-service'
 
     'problem-solved':
-        title: "Problem is solved"
-        final: True
-        question: "Thanks"
+        title: "Problem solved"
+        final: true
+        question: "Looks like your problem is solved :)"
 
     'send-cp-to-service':
-        title: "Send the CP to the service"
-        final: True
-        question: "Thanks"
+        title: "CP to service"
+        final: true
+        question: "Send control panel to service"
+        description: '''
+            The control panel needs to be serviced in the factory. Please contact
+            Tolon at service@tolon.com for instructions.
+        '''
 
     'run-a-program':
         title: "Run A Program"

@@ -19,8 +19,8 @@ cards:
         negative:
             target: 'check-sail-switch'
 
-    'revert-vacuum-parameters'
-        title: "Revert Vacuum Parameters Back to Original Settings"
+    'revert-parameters-to-original':
+        title: "Revert parameters back to original settings"
         processes: [
             title: "Revert the vacuum parameters back to their original settings"
             steps: [
@@ -71,7 +71,7 @@ cards:
         negative:
             target: 'fix-loading-door-closing'
 
-    'check-lint-filter-closing'
+    'check-lint-filter-closing':
         title: "Check closing of Lint Filter Door"
         processes: [
             title: "Check the closing of the lint filter door"
@@ -85,7 +85,7 @@ cards:
         negative:
             target: 'close-lint-filter-door'
 
-    'fix-loading-door-closing'
+    'fix-loading-door-closing':
         title: "Fix closing of Loading Door Problem"
         processes: [
             title: "Fix the closing problem of the loading door"
@@ -100,7 +100,7 @@ cards:
         negative:
             target: 'check-lint-filter-closing'
 
-    'close-lint-filter-door'
+    'close-lint-filter-door':
         title: "Close Lint Filter Door"
         processes: [
             title: "Close the lint filter door correctly"
@@ -115,7 +115,7 @@ cards:
         negative:
             target: 'check-lint-filter-dust'
 
-    'check-lint-filter-dust'
+    'check-lint-filter-dust':
         title: "Check Dust on Lint Filter"
         processes: [
             title: "Check the dustiness of the lint filter"
@@ -129,7 +129,7 @@ cards:
         negative:
             target: 'check-fan-motor-rotation'
 
-    'clean-lint-filter'
+    'clean-lint-filter':
         title: "Clean Lint Filter"
         processes: [
             title: "Clean the lint filter"
@@ -144,7 +144,7 @@ cards:
         negative:
             target: 'check-fan-motor-rotation'
 
-    'check-fan-motor-rotation'
+    'check-fan-motor-rotation':
         title: "Check Fan Motor Rotation Direction"
         processes: [
             title: "Check the rotation direction of the fan motor"
@@ -161,7 +161,7 @@ cards:
         negative:
             target: 'fix-fan-motor-rotation'
 
-    'fix-fan-motor-rotation'
+    'fix-fan-motor-rotation':
         title: "Fix Fan Motor Rotation Direction"
         processes: [
             title: "Fix the rotation direction of the fan motor"
@@ -183,7 +183,7 @@ cards:
         negative:
             target: 'check-exhaust-outlet'
 
-    'check-exhaust-outlet'
+    'check-exhaust-outlet':
         title: "Check Exhaust Outlet"
         processes: [
             title: "Check the exhaust outlet"
@@ -200,7 +200,7 @@ cards:
         negative:
             target: 'check-sail-switch-flap'
 
-    'clean-exhaust'
+    'clean-exhaust':
         title: "Clean/Clear Exhaust"
         processes: [
             title: "Clean/Clear the exhaust"
@@ -216,7 +216,7 @@ cards:
         negative:
             target: 'check-sail-switch-flap'
 
-    'check-sail-switch-flap'
+    'check-sail-switch-flap':
         title: "Check Sail Switch Flap"
         processes: [
             title: "Check the flap of the sail switch"
@@ -232,7 +232,7 @@ cards:
         negative:
             target: 'replace-sail-switch-flap'
 
-    'replace-sail-switch-flap'
+    'replace-sail-switch-flap':
         title: "Replace Sail Switch Flap"
         processes: [
             title: "Replace the sail switch flap"
@@ -254,7 +254,7 @@ cards:
         negative:
             target: 'check-sail-switch-flap-pallet'
 
-    'check-sail-switch-flap-pallet'
+    'check-sail-switch-flap-pallet':
         title: "Check Sail Switch Flap Pallet"
         processes: [
             title: "Check the sail switch flap pallet"
@@ -270,7 +270,7 @@ cards:
         negative:
             target: 'reset-sail-switch-flap'
 
-    'reset-sail-switch-flap'
+    'reset-sail-switch-flap':
         title: "Reset Sail Switch Flap"
         processes: [
             title: "Reset the sail switch flap"
@@ -287,7 +287,7 @@ cards:
         negative:
             target: 'check-sail-switch-terminal-cable'
 
-    'check-sail-switch-terminal-cable'
+    'check-sail-switch-terminal-cable':
         title: "Check Cable between Sail Switch and Electric Terminal"
         processes: [
             title: "Check the cable between the sail switch and the electric terminal"
@@ -305,7 +305,7 @@ cards:
         negative:
             target: 'replace-sail-switch-terminal-cable'
 
-    'replace-sail-switch-terminal-cable'
+    'replace-sail-switch-terminal-cable':
         title: "Replace Cable between Sail Switch and Electric Terminal"
         processes: [
             title: "Replace/Repair the cable between the sail switch and the electric terminal"
@@ -325,7 +325,7 @@ cards:
         negative:
             target: 'check-terminal-control-panel-cable'
 
-    'check-terminal-control-panel-cable'
+    'check-terminal-control-panel-cable':
         title: "Check Cable between Electric Terminal and Control Panel"
         processes: [
             title: "Check the cable between the electric terminal and the control panel"
@@ -342,7 +342,7 @@ cards:
         negative:
             target: 'replace-terminal-control-panel-cable'
 
-    'replace-terminal-control-panel-cable'
+    'replace-terminal-control-panel-cable':
         title: "Replace Cable between Electric Terminal and Control Panel"
         processes: [
             title: "Replace/Repair the cable between the electric terminal and the control panel"
@@ -361,7 +361,7 @@ cards:
         negative:
             target: 'change-vacuum-di'
 
-    'change-vacuum-di'
+    'change-vacuum-di':
         title: "Change Vacuum Sensor DI Assignment"
         processes: [
             title: "Change the DI assignment for the Vacuum Sensor"

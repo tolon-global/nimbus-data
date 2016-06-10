@@ -63,6 +63,9 @@ cards:
                 "Plug the contact of the ESB into its socket"
                 "Screw the ESB cable terminals into the ESB contact socket"
             ]
+            tools: ['voltage-tester']
+            parts: ['th-0100-57392']
+
             "general/left-panel-close"
             '$template'
         ]
@@ -83,6 +86,7 @@ cards:
                 and the contrary in closed position (pressed)
                 """ # multiline entry
             ]
+            tools: ['multimeter']
         ]
         question: "Is the contact functioning?"
         negative: "replace-esb-contact"
@@ -100,6 +104,9 @@ cards:
                 "Plug the new ESB contact into its socket"
                 "Screw the ESB cable terminals into the ESB contact socket"
             ]
+            tools: ['voltage-tester']
+            parts: ['th-0100-04857']
+
             '$template' # include template processes
         ]
 
@@ -108,4 +115,9 @@ processes:  # reusable blocks
         title: "Check the 'Emergency Stop' alarm status"
         steps: [
             "Check the screen for the alert box"
+        ]
+    'check-esb-mechanically':
+        title: "Check the Emergency Stop Button mechanically"
+        steps: [
+            "Press the ESB to check if the button can be pressed"
         ]
