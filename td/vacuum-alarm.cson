@@ -9,3 +9,26 @@ cards:
             target: 'revert-parameters-to-original'
         negative:
             target: 'check-sail-switch'
+
+    'revert-parameters-to-original'
+        title: "Revert parameters back to original settings"
+        processes: [
+            title: "Revert the parameters back to their original settings"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-sail-switch'
+
+    'check-sail-switch':
+        title: "Check Operation of Sail Switch"
+        processes: [
+            title: "Check the operation of the sail switch "
+        ]
+        question: "Is it operating?"
+        positive:
+            target: 'check-sail-switch-flap'
+        negative:
+            target: 'check-loading-door-closing'
