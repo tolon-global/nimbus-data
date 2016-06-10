@@ -96,6 +96,7 @@ expand_assets = (uri, card) ->
                     asset
 
 mesh_uri = (context, local) ->
+    return local if local.match /^\$\w+/ # do not expand $variables
     context_fragments = context.split '/'
     local_fragments = local.split '/'
     [context_fragments[0...-local_fragments.length]..., local_fragments...].join '/'

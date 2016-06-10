@@ -307,7 +307,7 @@
     "description": "Press the menu button and select \"alarms\". You can scroll through the\nlogged alarms.",
     "positive": {
       "title": "That's it",
-      "target": "td/alarm/$option",
+      "target": "$option",
       "label": "Yes"
     },
     "negative": {
