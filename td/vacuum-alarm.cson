@@ -54,3 +54,27 @@ cards:
             target: 'check-lint-filter-dust'
         negative:
             target: 'close-lint-filter-door'
+
+    'fix-loading-door-closing'
+        title: "Fix closing of Loading Door Problem"
+        processes: [
+            title: "Fix the closing problem of the loading door"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-lint-filter-closing'
+
+    'close-lint-filter-door'
+        title: "Close Lint Filter Door"
+        processes: [
+            title: "Close the lint filter door correctly"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-lint-filter-dust'
