@@ -38,6 +38,7 @@ g = glob "**/*.cson", (e,f) ->
         expand_assets uri, card
         identify_videos uri, card
         secondify_timecodes uri, card
+        add_empty_processes_key uri, card
         console.log uri
 
     #data.assets.videos = unique data.assets.videos
@@ -133,3 +134,6 @@ unique = (array) ->
     hash = {}
     hash[e] = e for e in array
     (key for key, value of hash)
+
+
+add_empty_processes_key = (uri, card) -> card.processes ?= []

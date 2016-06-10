@@ -27,7 +27,8 @@
     "negative": {
       "label": "Something else",
       "target": "escape/general/something-else"
-    }
+    },
+    "processes": []
   },
   "escape/general/no-parts": {
     "class": "escape",
@@ -40,7 +41,8 @@
     "negative": {
       "label": "No need",
       "target": "escape/general/continue-later"
-    }
+    },
+    "processes": []
   },
   "escape/general/order-parts": {
     "class": "escape",
@@ -54,21 +56,24 @@
     "negative": {
       "label": "Something else",
       "target": "escape/general/something-else"
-    }
+    },
+    "processes": []
   },
   "escape/general/order-parts-done": {
     "class": "escape",
     "title": "Order sent",
     "question": "Order received",
     "description": "Your order has been received. You can continue this service call by\nentering the machine serial number again.",
-    "final": true
+    "final": true,
+    "processes": []
   },
   "escape/general/continue-later": {
     "class": "escape",
     "title": "Continue later",
     "question": "Continue later",
     "description": "Your progress is saved. You can continue this service call by\nentering the machine serial number again.",
-    "final": true
+    "final": true,
+    "processes": []
   },
   "escape/general/something-else": {
     "class": "escape",
@@ -86,7 +91,8 @@
     "negative": {
       "label": "I can't",
       "target": "escape/general/continue-later"
-    }
+    },
+    "processes": []
   },
   "escape/general/no-tools": {
     "class": "escape",
@@ -100,7 +106,8 @@
     "negative": {
       "label": "Something else",
       "target": "escape/general/something-else"
-    }
+    },
+    "processes": []
   },
   "escape/general/no-time": {
     "class": "escape",
@@ -127,7 +134,8 @@
     "negative": {
       "label": "Something else",
       "target": "escape/general/something-else"
-    }
+    },
+    "processes": []
   },
   "service/serial-number": {
     "title": "Serial",
@@ -153,7 +161,8 @@
     "negative": {
       "label": "I can't",
       "target": "service/identify-machine"
-    }
+    },
+    "processes": []
   },
   "service/identify-machine": {
     "title": "Machine",
@@ -188,14 +197,16 @@
     "negative": {
       "label": "Not in list",
       "target": "service/request-help"
-    }
+    },
+    "processes": []
   },
   "service/request-help": {
     "title": "Request help",
     "final": true,
     "question": "Please call +90-232-363-0000 for help",
     "call": "+90-232-363-0000",
-    "description": "We are sorry that we couldn't find a solution immediately. Our staff\nis always happy to help and solve your problem. Just give us a call."
+    "description": "We are sorry that we couldn't find a solution immediately. Our staff\nis always happy to help and solve your problem. Just give us a call.",
+    "processes": []
   },
   "td/alarm/alarm-code": {
     "title": "Alarm code",
@@ -317,17 +328,20 @@
       "title": "Something else",
       "target": "td/alarm/non-alarm-problem",
       "label": "No"
-    }
+    },
+    "processes": []
   },
   "td/alarm/no-alarm": {
     "title": "No alarm",
     "question": "That's good then :)",
-    "final": true
+    "final": true,
+    "processes": []
   },
   "td/alarm/non-alarm-problem": {
     "title": "Problem",
     "question": "Coming soon",
-    "final": true
+    "final": true,
+    "processes": []
   },
   "td/vacuum-alarm/check-vacuum-parameters": {
     "title": "Check Vacuum Parameters",
@@ -677,7 +691,8 @@
     "negative": {
       "label": "Something else",
       "target": "we110/alarm/non-alarm-problem"
-    }
+    },
+    "processes": []
   },
   "we110/heater-fail/heating-type": {
     "question": "Is this a steam-heated machine",
@@ -701,7 +716,8 @@
       "set": {
         "heating": "electric"
       }
-    }
+    },
+    "processes": []
   },
   "we110/steam/heater-fail/check-steam-heating-do": {
     "title": "Check Steam Heating DO",
@@ -1022,13 +1038,15 @@
   "we110/steam/heater-fail/problem-solved": {
     "title": "Problem solved",
     "final": true,
-    "question": "Looks like your problem is solved :)"
+    "question": "Looks like your problem is solved :)",
+    "processes": []
   },
   "we110/steam/heater-fail/send-cp-to-service": {
     "title": "CP to service",
     "final": true,
     "question": "Send control panel to service",
-    "description": "The control panel needs to be serviced in the factory. Please contact\nTolon at service@tolon.com for instructions."
+    "description": "The control panel needs to be serviced in the factory. Please contact\nTolon at service@tolon.com for instructions.",
+    "processes": []
   },
   "we60/emergency-stop-alarm/check-alarm": {
     "title": "Check alarm",
