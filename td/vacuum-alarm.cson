@@ -3,6 +3,15 @@ cards:
         title: "Check Vacuum Parameters"
         processes: [
             title: "Check the vacuum related system parameters"
+            steps: [
+                'Shut off electricity to the dryer by pressing the "Emergency Stop" button.'
+                'Press and hold the "Up Direction" button.'
+                'Release the "Emergency Stop" button to power on the dryer.'
+                'Enter the password by pressing the up-down direction buttons to change the numbers in each digit and press the stop-start (left-right direction) buttons to change the digits.'
+                'Complete the password entry by pressing the "OK" button.'
+                'The controller will display the first parameter in the list.'
+                'Check the 59. and 60. parameters to see if they have been changed by pressing the up-down direction buttons to change the parameter number.'
+            ]
         ]
         question: "Have they been modified?"
         positive:
