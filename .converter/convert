@@ -39,6 +39,7 @@ g = glob "**/*.cson", (e,f) ->
         identify_videos uri, card
         secondify_timecodes uri, card
         add_empty_processes_key uri, card
+        add_empty_answer_keys uri,card
         console.log uri
 
     #data.assets.videos = unique data.assets.videos
@@ -142,3 +143,5 @@ unique = (array) ->
 
 
 add_empty_processes_key = (uri, card) -> card.processes ?= []
+
+add_empty_answer_keys = (uri, card) -> card.positive ?= card.negative ?= {}
