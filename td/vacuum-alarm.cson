@@ -258,6 +258,11 @@ cards:
         title: "Check Sail Switch Flap Pallet"
         processes: [
             title: "Check the sail switch flap pallet"
+            steps: [
+                'Turn off power'
+                'Open the rear middle panel'
+                "Check the sail switch flap pallet to see if it's bent"
+            ]
         ]
         question: "Is it set correctly?"
         positive:
@@ -269,6 +274,11 @@ cards:
         title: "Reset Sail Switch Flap"
         processes: [
             title: "Reset the sail switch flap"
+            steps: [
+                'Unbolt the sail switch bolts'
+                'Reset the sail switch to align the sail switch flap pallet to the correct position'
+                'Bolt the sail switch bolts'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
