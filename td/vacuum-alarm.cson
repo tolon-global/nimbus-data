@@ -165,6 +165,16 @@ cards:
         title: "Fix Fan Motor Rotation Direction"
         processes: [
             title: "Fix the rotation direction of the fan motor"
+            steps: [
+                'Turn off the power'
+                'Open the rear middle panel'
+                'Open the fan motor cover'
+                'Change the directivity of two cables coming from the source electrical terminal'
+                'Close the fan motor cover'
+                'Close the rear middle panel'
+                'Turn on the power'
+                'Check if the fan motor is rotating in the correct direction'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -177,6 +187,12 @@ cards:
         title: "Check Exhaust Outlet"
         processes: [
             title: "Check the exhaust outlet"
+            steps: [
+                'Turn off the power'
+                'Wait for the exhaust pipes to cooldown'
+                'Unbolt the exhaust pipeline from the machine'
+                "Inspect the exhaust pipeline to see if it's clogged visually"
+            ]
         ]
         question: "Is the exhaust blocked?"
         positive:
