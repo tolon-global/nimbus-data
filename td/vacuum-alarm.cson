@@ -3,17 +3,34 @@ cards:
         title: "Check Vacuum Parameters"
         processes: [
             title: "Check the vacuum related system parameters"
+            steps: [
+                'Shut off electricity to the dryer by pressing the "Emergency Stop" button.'
+                'Press and hold the "Up Direction" button.'
+                'Release the "Emergency Stop" button to power on the dryer.'
+                'Enter the password by pressing the up-down direction buttons to change the numbers in each digit and press the stop-start (left-right direction) buttons to change the digits.'
+                'Complete the password entry by pressing the "OK" button.'
+                'The controller will display the first parameter in the list.'
+                'Check the 59. and 60. parameters to see if they have been changed by pressing the up-down direction buttons to change the parameter number.'
+            ]
         ]
         question: "Have they been modified?"
         positive:
-            target: 'revert-parameters-to-original'
+            target: 'revert-vacuum-parameters'
         negative:
             target: 'check-sail-switch'
 
     'revert-parameters-to-original':
         title: "Revert parameters back to original settings"
         processes: [
-            title: "Revert the parameters back to their original settings"
+            title: "Revert the vacuum parameters back to their original settings"
+            steps: [
+                'Select the changed vacuum parameter.'
+                'Press the "OK" button to switch to value editing mode.'
+                'Change the values by pressing the up-down direction buttons. Change digits by pressing the stop-start (left-right direction) buttons.'
+                'When the value has been defined press the "Cancel" button to return to the parameter menu.'
+                'Press the "Cancel" button in the parameter menu and answer the question "Save ?" with "Y" (Yes) to save the changes.'
+                'If another vacuum parameter has been changed, too, repeat the steps 1 to 6 for the related parameter.'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -26,6 +43,13 @@ cards:
         title: "Check Operation of Sail Switch"
         processes: [
             title: "Check the operation of the sail switch"
+            steps: [
+                'Open the electic cabinet door'
+                'Enter the Diagnostics menu'
+                'Select DI4 (Vacuum DI)'
+                'Press the sail switch flap'
+                'Check if the DI4 value is changing when you press and release the flap'
+            ]
         ]
         question: "Is it operating?"
         positive:
@@ -37,6 +61,9 @@ cards:
         title: "Check closing of Loading Door"
         processes: [
             title: "Check the closing of the loading door"
+            steps: [
+                'Check if the loading door is air tight'
+            ]
         ]
         question: "Is it closing?"
         positive:
@@ -48,6 +75,9 @@ cards:
         title: "Check closing of Lint Filter Door"
         processes: [
             title: "Check the closing of the lint filter door"
+            steps: [
+                'Check if the lint filter door is air tight'
+            ]
         ]
         question: "Is it closing?"
         positive:
@@ -59,6 +89,9 @@ cards:
         title: "Fix closing of Loading Door Problem"
         processes: [
             title: "Fix the closing problem of the loading door"
+            steps: [
+                'Fix the air gap of the loading door'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -71,6 +104,9 @@ cards:
         title: "Close Lint Filter Door"
         processes: [
             title: "Close the lint filter door correctly"
+            steps: [
+                'Close the lint filter door to make the machine air tight'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -83,6 +119,9 @@ cards:
         title: "Check Dust on Lint Filter"
         processes: [
             title: "Check the dustiness of the lint filter"
+            steps: [
+                'Check if the lint filter is dusty'
+            ]
         ]
         question: "Is the filter dusty?"
         positive:
@@ -94,6 +133,9 @@ cards:
         title: "Clean Lint Filter"
         processes: [
             title: "Clean the lint filter"
+            steps: [
+                'Clean the lint filter by using a brush'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -106,6 +148,12 @@ cards:
         title: "Check Fan Motor Rotation Direction"
         processes: [
             title: "Check the rotation direction of the fan motor"
+            steps: [
+                'Open the rear middle panel'
+                'Start any program'
+                'Check the fan motor to see its rotation direction. The correct direction is stated by the direction label.'
+                'Stop the program'
+            ]
         ]
         question: "Is it rotating CW?"
         positive:
@@ -117,6 +165,16 @@ cards:
         title: "Fix Fan Motor Rotation Direction"
         processes: [
             title: "Fix the rotation direction of the fan motor"
+            steps: [
+                'Turn off the power'
+                'Open the rear middle panel'
+                'Open the fan motor cover'
+                'Change the directivity of two cables coming from the source electrical terminal'
+                'Close the fan motor cover'
+                'Close the rear middle panel'
+                'Turn on the power'
+                'Check if the fan motor is rotating in the correct direction'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -129,6 +187,12 @@ cards:
         title: "Check Exhaust Outlet"
         processes: [
             title: "Check the exhaust outlet"
+            steps: [
+                'Turn off the power'
+                'Wait for the exhaust pipes to cooldown'
+                'Unbolt the exhaust pipeline from the machine'
+                "Inspect the exhaust pipeline to see if it's clogged visually"
+            ]
         ]
         question: "Is the exhaust blocked?"
         positive:
@@ -140,6 +204,10 @@ cards:
         title: "Clean/Clear Exhaust"
         processes: [
             title: "Clean/Clear the exhaust"
+            steps: [
+                'Clean the exhaust'
+                'Bolt the exhaust pipeline back to the machine'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -152,6 +220,11 @@ cards:
         title: "Check Sail Switch Flap"
         processes: [
             title: "Check the flap of the sail switch"
+            steps: [
+                'Open the electic cabinet door'
+                'Start any program'
+                "Check the sail switch flap in the electric cabinet to see if it's being sucked by the vacuum and it sticks to the opening"
+            ]
         ]
         question: "Is the flap functioning?"
         positive:
@@ -163,6 +236,16 @@ cards:
         title: "Replace Sail Switch Flap"
         processes: [
             title: "Replace the sail switch flap"
+            steps: [
+                'Turn off the power'
+                'Open the rear middle panel'
+                'Open the sail switch cover by unbolting the flap bolts'
+                'Take out the faulty flap from its slit. Note the slit being used.'
+                'Insert the new flap into the correct slit'
+                'Close the sail switch cover by bolting the flap bolts'
+                'Close the rear middle panel'
+                'Turn on the power'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
@@ -193,3 +276,70 @@ cards:
             target: 'problem-solved'
         negative:
             target: 'check-sail-switch-terminal-cable'
+
+    'check-sail-switch-terminal-cable'
+        title: "Check Cable between Sail Switch and Electric Terminal"
+        processes: [
+            title: "Check the cable between the sail switch and the electric terminal"
+        ]
+        question: "Is the cable functional?"
+        positive:
+            target: 'check-terminal-control-panel-cable'
+        negative:
+            target: 'replace-sail-switch-terminal-cable'
+
+    'replace-sail-switch-terminal-cable'
+        title: "Replace Cable between Sail Switch and Electric Terminal"
+        processes: [
+            title: "Replace/Repair the cable between the sail switch and the electric terminal"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'check-terminal-control-panel-cable'
+
+    'check-terminal-control-panel-cable'
+        title: "Check Cable between Electric Terminal and Control Panel"
+        processes: [
+            title: "Check the cable between the electric terminal and the control panel"
+        ]
+        question: "Is the cable functional?"
+        positive:
+            target: 'change-vacuum-di'
+        negative:
+            target: 'replace-terminal-control-panel-cable'
+
+    'replace-terminal-control-panel-cable'
+        title: "Replace Cable between Electric Terminal and Control Panel"
+        processes: [
+            title: "Replace/Repair the cable between the electric terminal and the control panel"
+            "general/run-a-program"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'change-vacuum-di'
+
+    'change-vacuum-di'
+        title: "Change Vacuum Sensor DI Assignment"
+        processes: [
+            title: "Change the DI assignment for the Vacuum Sensor"
+        ]
+        question: "Is the problem solved?"
+        positive:
+            target: 'problem-solved'
+        negative:
+            target: 'send-cp-to-service'
+
+    'problem-solved':
+        title: "Problem is solved"
+        final: true
+        question: "Thanks"
+
+    'send-cp-to-service':
+        title: "Send the CP to the service"
+        final: true
+        question: "Thanks"
