@@ -236,6 +236,16 @@ cards:
         title: "Replace Sail Switch Flap"
         processes: [
             title: "Replace the sail switch flap"
+            steps: [
+                'Turn off the power'
+                'Open the rear middle panel'
+                'Open the sail switch cover by unbolting the flap bolts'
+                'Take out the faulty flap from its slit. Note the slit being used.'
+                'Insert the new flap into the correct slit'
+                'Close the sail switch cover by bolting the flap bolts'
+                'Close the rear middle panel'
+                'Turn on the power'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
