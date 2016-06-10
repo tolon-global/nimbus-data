@@ -23,6 +23,14 @@ cards:
         title: "Revert Vacuum Parameters Back to Original Settings"
         processes: [
             title: "Revert the vacuum parameters back to their original settings"
+            steps: [
+                'Select the changed vacuum parameter.'
+                'Press the "OK" button to switch to value editing mode.'
+                'Change the values by pressing the up-down direction buttons. Change digits by pressing the stop-start (left-right direction) buttons.'
+                'When the value has been defined press the "Cancel" button to return to the parameter menu.'
+                'Press the "Cancel" button in the parameter menu and answer the question "Save ?" with "Y" (Yes) to save the changes.'
+                'If another vacuum parameter has been changed, too, repeat the steps 1 to 6 for the related parameter.'
+            ]
             "general/run-a-program"
         ]
         question: "Is the problem solved?"
