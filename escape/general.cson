@@ -37,7 +37,7 @@ cards:
         ]
         positive:
             label: "That's it"
-            # target is not specified, will get from multiple choice
+            target: '$option'
         negative:
             label: "Something else"
             target: "something-else"
@@ -128,7 +128,7 @@ cards:
         ]
         positive:
             label: "Done"
-
+            target: '$option'
         negative:
             label: "Something else"
             target: 'something-else'

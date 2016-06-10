@@ -21,7 +21,8 @@
       }
     ],
     "positive": {
-      "label": "That's it"
+      "label": "That's it",
+      "target": "$option"
     },
     "negative": {
       "label": "Something else",
@@ -120,7 +121,8 @@
       }
     ],
     "positive": {
-      "label": "Done"
+      "label": "Done",
+      "target": "$option"
     },
     "negative": {
       "label": "Something else",
@@ -180,7 +182,8 @@
     ],
     "description": "Choose the model of your machine from the list provided.\nThe machine identifier can be seen behind the machine on\nthe top right corner of the nameplate.",
     "positive": {
-      "label": "Select"
+      "label": "Select",
+      "target": "$option"
     },
     "negative": {
       "label": "Not in list",
@@ -666,7 +669,15 @@
     "qrcode": {
       "label": "Get from QR code"
     },
-    "description": "Check the screen for the alarm code, Or use the QR code reader on the screen.\nIf you dismissed the alarm popup, you can get it again by going to the \"Alarm statistics\" page\non the machine."
+    "description": "Check the screen for the alarm code, Or use the QR code reader on the screen.\nIf you dismissed the alarm popup, you can get it again by going to the \"Alarm statistics\" page\non the machine.",
+    "positive": {
+      "label": "That's it",
+      "target": "$option"
+    },
+    "negative": {
+      "label": "Something else",
+      "target": "we110/alarm/non-alarm-problem"
+    }
   },
   "we110/heater-fail/heating-type": {
     "question": "Is this a steam-heated machine",

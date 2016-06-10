@@ -40,7 +40,7 @@ cards:
         '''
         positive:
             label: "Select"
-
+            target: '$option'
         negative:
             label: "Not in list"
             target: 'request-help'

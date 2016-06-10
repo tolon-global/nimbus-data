@@ -17,3 +17,11 @@ cards:
             If you dismissed the alarm popup, you can get it again by going to the "Alarm statistics" page
             on the machine.
         '''
+        positive:
+            label: "That's it"
+            target: '$option'
+        negative:
+            label: "Something else"
+            target: 'non-alarm-problem'
+
+    
