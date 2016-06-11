@@ -1,0 +1,6 @@
+{
+    "serial-number": "TTD2016060133",
+    "model": "TTD40",
+    "alarm": "Vacuum alarm",
+    "start": "td/vacuum-alarm/check-vacuum-parameters"
+}
